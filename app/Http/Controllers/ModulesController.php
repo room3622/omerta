@@ -112,6 +112,8 @@ class ModulesController extends Controller
 
 
                 return view("game");
+
+
             }else{
 
 
