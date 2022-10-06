@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title id="pageTitle">Omerta (PT/BR)</title>
+    <title id="pageTitle">{{ config('app.name') }}</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
@@ -36,10 +36,10 @@
     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
 
     <!-- Omerta -->
-    <link href="//static.barafranca.com/assets/5.7.3.0/layout.css" rel="stylesheet"/>
+    <link href="{{ asset('/assets/5.7.3.0/layout.css' )}}" rel="stylesheet"/>
 
     <link rel="stylesheet" href="/static/css/game/kill/style.css?v=5.7.3.0">
-    <script src="//static.barafranca.com/assets/5.7.3.0/layout.js" type="text/javascript"></script>
+    <script src="{{ asset('/assets/5.7.3.0/layout.js' )}}" type="text/javascript"></script>
 
 
 
