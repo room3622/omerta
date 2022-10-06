@@ -119,9 +119,9 @@ class ModulesController extends Controller
 
 
                 //return view("game");
-                return view("login");
+                //return view("login");
                 //return view("data");
-                //return view("Carater");
+                return view("Carater");
             }
 
 
