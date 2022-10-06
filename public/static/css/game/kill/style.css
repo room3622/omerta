@@ -1,0 +1,109 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+#wrappertest
+{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2%;
+}
+
+.tableFont
+{
+    font-size: 12px;
+}
+
+#lastAttempts
+{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+#killDetailsDiv
+{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#kill
+{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+#code
+{
+    width: 90%;
+    height: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+}
+
+#detectives
+{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+#detectives-hired-div
+{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+#attemptsOnYou
+{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+#yourAttempts
+{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+
+
+#safehouse
+{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+#safehouseMain
+{
+    width: 99.6%;
+    border: solid black 1px;
+    border-top: solid black 3px;
+}
+
+
+#backfire
+{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
