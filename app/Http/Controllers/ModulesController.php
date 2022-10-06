@@ -193,7 +193,7 @@ class ModulesController extends Controller
              * this checks if the email is in the database
              * impute needs to be clen
              * preper statment im place
-             * show the error msg 
+             * show the error msg
              */
 
             $msg = "This Email Is Already Registered!";
