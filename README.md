@@ -11,7 +11,7 @@
 </p>
 
 
-<p align="center">
+<p>
 Set up Steps 
 
 
