@@ -14,7 +14,11 @@
 <p>
 Set up Steps 
 <br>
-1 git Clone https://github.com/room3622/omerta.git . 
+<br>
+1 =  git Clone https://github.com/room3622/omerta.git . 
+<br>
+<br>
+2 = 
 </p>
 
 
