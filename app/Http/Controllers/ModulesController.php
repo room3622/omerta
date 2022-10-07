@@ -20,9 +20,9 @@ class ModulesController extends Controller
 
         if (isset($module)) {
 
-            // URL  modules lowercase only the first carecter is uper case
+            // URL  modules lowercase only the first character is upper case
             // removed all  . and withe spaces
-            // need to implemente auto
+            // need to implement auto
             // need to transform to OOP
             $module = str_replace('.', '', $module);
             $module = Str::lower($module);
@@ -31,12 +31,12 @@ class ModulesController extends Controller
 
             /*
              * switch case to get url modules
-             * to be improve to OOP
+             * to be improved to OOP
              */
 
             switch ($module) {
                 case 'Homepagelogin';
-                    return $this->Login($request, 'llogin teste ', 200);
+                    return $this->Login($request, 'login teste ', 200);
                     break;
                 case 'Homepageregister';
                     return $this->Register($request, 'resgister Moduler', 200);
@@ -109,8 +109,8 @@ class ModulesController extends Controller
 
 
         /*
-         * login funtion in order to login the user
-         * this is a teste mabye to be improve
+         * login function in order to log in the user
+         * this is a test maybe to be improved
          */
 
         // working checking credentials
@@ -135,7 +135,7 @@ class ModulesController extends Controller
             /*
              * this checks if the email is in the database
              * impute needs to be clen
-             * preper statment im place
+             * prepare statement im place
              * show the error msg
              */
 
@@ -144,7 +144,7 @@ class ModulesController extends Controller
 
         } else {
             /*
-             * procide to Register the account
+             * provide to Register the account
              * need email validation to be sent to user
              * and generate a password
              * then insert data to the database
