@@ -15,10 +15,28 @@
 Set up Steps 
 <br>
 <br>
-1 =  git Clone https://github.com/room3622/omerta.git . 
+1  run  git Clone https://github.com/room3622/omerta.git . 
 <br>
 <br>
-2 = 
+2 run  sudo chmod -R 777 storage
+<br>
+<br>
+3 run  npm update
+<br>
+<br>
+4 run  composer update 
+<br>
+<br>
+5 run  cp .env.example .env
+<br>
+<br> 
+6 run  php artisan  key:generate
+<br>
+<br> 
+6 run  php artisan migrate
+
+
+
 </p>
 
 
