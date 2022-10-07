@@ -11,6 +11,12 @@
 </p>
 
 
+<p align="center">
+Set up Steps 
+
+
+</p>
+
 
 
 <p align="center"><a href="https://github.com/room3622/omerta/blob/main/printscreen/Screenshot 2022-10-06 at 16.32.41.png" target="_blank"><img src="https://github.com/room3622/omerta/blob/main/printscreen/Screenshot 2022-10-06 at 16.32.41.png"></a></p>
