@@ -120,7 +120,7 @@ class ModulesController extends Controller
 
 
                 //return view("game");
-                return view("login2n");
+                return view("login");
                 //return view("data");
                 //return view("Carater");
             }
