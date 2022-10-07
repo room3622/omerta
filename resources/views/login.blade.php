@@ -20,8 +20,7 @@
     <link rel="canonical" href={{ config('app.url') }}"/>
 
     <!-- Needed fonts -->
-    <link rel=" stylesheet
-    " href="//fonts.googleapis.com/css?family=Arimo:400,700" type="text/css"/>
+    <link rel=" stylesheet" href="//fonts.googleapis.com/css?family=Arimo:400,700" type="text/css"/">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- VENDOR CORE -->
 
@@ -3346,20 +3345,6 @@
     });
 </script>
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-190495068-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-190495068-1');
-</script>
 
 
 <script type="application/ld+json">

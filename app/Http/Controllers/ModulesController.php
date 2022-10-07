@@ -40,6 +40,7 @@ class ModulesController extends Controller
 
                      return $this->Login($request, 'Login Teste', 10);
 
+
                     break;
                 case 'Homepageregister';
                     return $this->Register($request, 'resgister Moduler', 200);
@@ -72,10 +73,15 @@ class ModulesController extends Controller
             if (Auth::check()) {
 
 
+
                 return view('game');
 
 
             } else {
+
+
+
+                $users = DB::table('users')->get();
 
 
 
@@ -85,8 +91,8 @@ class ModulesController extends Controller
 
 
                 //return view("game");
-                //return view('login');
-                return view("data");
+                return view('login');
+                //return view("data");
                 //return view("Carater");
             }
 
@@ -97,12 +103,6 @@ class ModulesController extends Controller
     }
 
 
-    public function build()
-    {
-        return $this->from('example@example.com', 'Example')
-            ->subject('Order Shipped')
-            ->view('emails.orders.shipped');
-    }
 
     public function Login(Request $request, $msg = null, $code = null)
     {
@@ -113,7 +113,7 @@ class ModulesController extends Controller
         $users = DB::table('users')->get();
 
         foreach ($users as $user) {
-            // var_dump($user->email);
+            //var_dump($user->email);
         }
 
 
