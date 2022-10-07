@@ -10,9 +10,9 @@ class RenderController extends Controller
 
 
 
-    public static function Render($request, $msg=null,$code=10){
+    public static function Render($request, $msg=null,$code=null){
 
-        //$msg = array("message"=>"teste");
+
         if(isset($msg)){
             $msg = array('message' =>"$msg");
         }else{
