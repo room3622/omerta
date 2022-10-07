@@ -2,30 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\RenderController;
-use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 
 class ModulesController extends Controller
 {
 
 
-
-
-
-
-
-    public function Start(Request $request){
+    public function Start(Request $request)
+    {
         $module = $request->module;
 
 
-        if(isset($module)){
+        if (isset($module)) {
 
             // URL  modules lowercase only the first carecter is uper case
             // removed all  . and withe spaces
@@ -36,7 +29,6 @@ class ModulesController extends Controller
             $module = ucfirst($module);
 
 
-
             /*
              * switch case to get url modules
              * to be impruve to OOP
@@ -44,15 +36,15 @@ class ModulesController extends Controller
 
             switch ($module) {
                 case "Homepagelogin";
-                    return $this->Login($request,"llogin teste ",200);
-                 break;
+                    return $this->Login($request, "llogin teste ", 200);
+                    break;
                 case "Homepageregister";
-                    return $this->Register($request,"resgister Moduler",200);
+                    return $this->Register($request, "resgister Moduler", 200);
                     break;
 
                 case "Homepagesocial";
 
-                echo "facebook Login Register";
+                    echo "facebook Login Register";
                     break;
 
                 case "Servicesaccount";
@@ -60,63 +52,27 @@ class ModulesController extends Controller
                     break;
 
 
-
                 case "Servicesmenu";
 
                     break;
 
 
-
-
-
                 default:
-                    return $this->Login($request,"This module dont existes! ",200);
+                    return $this->Login($request, "This module dont existes! ", 200);
 
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }else{
-
-
-
-
-
-
-
+        } else {
 
 
             if (Auth::check()) {
 
 
-
-
                 return view("game");
 
 
-            }else{
-
+            } else {
 
 
                 //return view("game");
@@ -132,21 +88,17 @@ class ModulesController extends Controller
     }
 
 
-
-
-
-    public function Login(Request $request,$msg=null,$code=null){
+    public function Login(Request $request, $msg = null, $code = null)
+    {
 
 
         // The user is logged in...
 
         $users = DB::table('users')->get();
 
-        foreach ($users as $user)
-        {
+        foreach ($users as $user) {
             // var_dump($user->email);
         }
-
 
 
         if (Auth::check()) {
@@ -154,10 +106,6 @@ class ModulesController extends Controller
         }
 
         //abort(404);
-
-
-
-
 
 
         /*
@@ -173,22 +121,13 @@ class ModulesController extends Controller
         ]);
 
 
-        return RenderController::Render($request,$msg,$code);
+        return RenderController::Render($request, $msg, $code);
 
     }
 
 
-
-
-
-
-
-
-
-
-
-
-    public function Register(Request $request,$msg,$code){
+    public function Register(Request $request, $msg, $code)
+    {
 
 
         if (DB::table('users')->where('email', $request->mail)->exists()) {
@@ -203,26 +142,19 @@ class ModulesController extends Controller
             $msg = "This Email Is Already Registered!";
 
 
-
-        }else{
-          /*
-           * procide to Register the account
-           * need email validation to be sent to user
-           * and generate a password
-           * then insert data to the database
-           *
-           */
+        } else {
+            /*
+             * procide to Register the account
+             * need email validation to be sent to user
+             * and generate a password
+             * then insert data to the database
+             *
+             */
         }
 
 
-
-
-
-
-        return RenderController::Render($request,$msg,$code);
+        return RenderController::Render($request, $msg, $code);
     }
-
-
 
 
     /**
@@ -259,7 +191,7 @@ class ModulesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function show($id)
@@ -270,7 +202,7 @@ class ModulesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function edit($id)
@@ -282,7 +214,7 @@ class ModulesController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function update(Request $request, $id)
@@ -293,7 +225,7 @@ class ModulesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function destroy($id)
@@ -302,7 +234,8 @@ class ModulesController extends Controller
     }
 
 
-    public  function outputdatajson($data){
+    public function outputdatajson($data)
+    {
 
         return response($data, 200)
             ->header('Content-Type:', 'application/json');
