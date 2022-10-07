@@ -31,34 +31,34 @@ class ModulesController extends Controller
 
             /*
              * switch case to get url modules
-             * to be impruve to OOP
+             * to be improve to OOP
              */
 
             switch ($module) {
-                case "Homepagelogin";
-                    return $this->Login($request, "llogin teste ", 200);
+                case 'Homepagelogin';
+                    return $this->Login($request, 'llogin teste ', 200);
                     break;
-                case "Homepageregister";
-                    return $this->Register($request, "resgister Moduler", 200);
-                    break;
-
-                case "Homepagesocial";
-
-                    echo "facebook Login Register";
+                case 'Homepageregister';
+                    return $this->Register($request, 'resgister Moduler', 200);
                     break;
 
-                case "Servicesaccount";
+                case 'Homepagesocial';
+
+                    echo 'facebook Login Register';
+                    break;
+
+                case 'Servicesaccount';
 
                     break;
 
 
-                case "Servicesmenu";
+                case 'Servicesmenu';
 
                     break;
 
 
                 default:
-                    return $this->Login($request, "This module dont existes! ", 200);
+                    return $this->Login($request, 'This module dont existes! ', 200);
 
             }
 
@@ -69,14 +69,14 @@ class ModulesController extends Controller
             if (Auth::check()) {
 
 
-                return view("game");
+                return view('game');
 
 
             } else {
 
 
                 //return view("game");
-                return view("login");
+                return view('login');
                 //return view("data");
                 //return view("Carater");
             }
@@ -139,7 +139,7 @@ class ModulesController extends Controller
              * show the error msg
              */
 
-            $msg = "This Email Is Already Registered!";
+            $msg = 'This Email Is Already Registered!';
 
 
         } else {

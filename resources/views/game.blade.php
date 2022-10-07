@@ -768,7 +768,7 @@
 
         var startDate = new Date();
         startDate.setTime(1664481133 * 1000
-        )
+        );
         omerta.character.info.name('Room');
         omerta.character.info.gender('1');
         omerta.character.info.avatar("//static.barafranca.com/omerta_placeholder.png");
@@ -854,7 +854,7 @@
                 });
             });
     };
-    !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()
+    !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}();
     FreshworksWidget('setLabels', {
         'pt': {
             banner: "Bem-vindo(a) ao Suporte",

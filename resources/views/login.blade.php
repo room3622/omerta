@@ -17,12 +17,11 @@
     <meta property="og:image" content="{{  asset('/assets/images/social.jpg') }}"/>
 
 
-
-
     <link rel="canonical" href={{ config('app.url') }}"/>
 
     <!-- Needed fonts -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arimo:400,700" type="text/css"/>
+    <link rel=" stylesheet
+    " href="//fonts.googleapis.com/css?family=Arimo:400,700" type="text/css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- VENDOR CORE -->
 
@@ -63,7 +62,8 @@
         <main class="px-3 flex-grow-1">
             <img id="logo_game" src="assets/logo2.svg"/>
             <h2 class="mt-3">The Godfather of Mafia games</h2>
-            <button class="mt-3 btn btn-big btn-action btnright btn-bold hp-join" data-bs-toggle="modal" data-bs-target="#signupModal">
+            <button class="mt-3 btn btn-big btn-action btnright btn-bold hp-join" data-bs-toggle="modal"
+                    data-bs-target="#signupModal">
                 join now for free!
             </button>
         </main>
@@ -71,13 +71,15 @@
         <div class="m-3">
             <nav id="hp_nav">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                            type="button"
                             role="tab" aria-controls="nav-home" aria-selected="true">Top Families
                     </button>
                 </div>
             </nav>
             <div class="tab-content bg-data" id="nav-tabContent">
-                <div class="tab-pane show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                <div class="tab-pane show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                     tabindex="0">
                     <div class="row equal row-cols-1 row-cols-md-3 g-4 py-3 px-4">
                         <div class="col">
                             <div class="family-card px-2 h-100">
@@ -86,7 +88,8 @@
                                     <div class="col-sm-12 fname p-2">
                                         <div class="row">
                                             <div class="col-lg-3 text-center">
-                                                <img class="img-fluid m-1" src="https://static.barafranca.com/omerta_placeholder.png"
+                                                <img class="img-fluid m-1"
+                                                     src="https://static.barafranca.com/omerta_placeholder.png"
                                                      alt="">
                                             </div>
                                             <div class="col-lg-9 text-lg-start text-center pt-lg-1">
@@ -1793,7 +1796,8 @@
                                     <div class="col-sm-12 fname p-2">
                                         <div class="row">
                                             <div class="col-lg-3 text-center">
-                                                <img class="img-fluid m-1" src="https://static.barafranca.com/omerta_placeholder.png"
+                                                <img class="img-fluid m-1"
+                                                     src="https://static.barafranca.com/omerta_placeholder.png"
                                                      alt="">
                                             </div>
                                             <div class="col-lg-9 text-lg-start text-center pt-lg-1">
@@ -2363,7 +2367,8 @@
                                     <div class="col-sm-12 fname p-2">
                                         <div class="row">
                                             <div class="col-lg-3 text-center">
-                                                <img class="img-fluid m-1" src="https://static.barafranca.com/omerta_placeholder.png"
+                                                <img class="img-fluid m-1"
+                                                     src="https://static.barafranca.com/omerta_placeholder.png"
                                                      alt="">
                                             </div>
                                             <div class="col-lg-9 text-lg-start text-center pt-lg-1">
@@ -2920,14 +2925,14 @@
                         </div>
 
 
-
                     </div>
                     <div class="row row-cols-1 g-4 py-3 px-4">
                         <div class="col">
                             <div class="family-card p-2">
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
-                                        <strong><span style="display: inline-block; width: 15px; margin-right: 5px;">#4</span>
+                                        <strong><span
+                                                style="display: inline-block; width: 15px; margin-right: 5px;">#4</span>
                                             Gondor
                                         </strong>
                                     </div>
@@ -2945,7 +2950,8 @@
                                 </div>
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
-                                        <strong><span style="display: inline-block; width: 15px; margin-right: 5px;">#5</span>
+                                        <strong><span
+                                                style="display: inline-block; width: 15px; margin-right: 5px;">#5</span>
                                             Batavia
                                         </strong>
                                     </div>
@@ -2961,7 +2967,8 @@
                                 </div>
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
-                                        <strong><span style="display: inline-block; width: 15px; margin-right: 5px;">#6</span>
+                                        <strong><span
+                                                style="display: inline-block; width: 15px; margin-right: 5px;">#6</span>
                                             Vengeance
                                         </strong>
                                     </div>
@@ -2979,7 +2986,8 @@
                                 </div>
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
-                                        <strong><span style="display: inline-block; width: 15px; margin-right: 5px;">#7</span>
+                                        <strong><span
+                                                style="display: inline-block; width: 15px; margin-right: 5px;">#7</span>
                                             Reichsthaler
                                         </strong>
                                     </div>
@@ -3004,10 +3012,10 @@
                             $(".overflow-auto").perfectScrollbar();
                         });
 
-                    </script>    </div>
-            </div>        </div>
-
-
+                    </script>
+                </div>
+            </div>
+        </div>
 
 
         <div class="bg-data m-3 p-3">
@@ -3020,7 +3028,8 @@
         </div>
     </div>
     <footer class="mt-3 text-white-50">
-        <span class="color">&copy; 2004 - {{ date("Y") }} - {{ config('app.name') }} PUBLISHING LTD (Company Reg: )</span>
+        <span
+            class="color">&copy; 2004 - {{ date('Y') }} - {{ config('app.name') }} PUBLISHING LTD (Company Reg: )</span>
     </footer>
 
 </div>
@@ -3112,7 +3121,8 @@
         });
     }
 
-</script><div class="modal fade" id="forgotModal" tabindex="-1">
+</script>
+<div class="modal fade" id="forgotModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen-sm-down modal-lg">
         <div class="modal-content register-container">
             <form action="?nojs=1&act=login" method="post" data-bind="submit: doForgottenPassword" id="forgotbox">
@@ -3149,8 +3159,6 @@
             </form>
 
 
-
-
         </div>
     </div>
 </div>
@@ -3161,7 +3169,8 @@
         window.forgotModal = new bootstrap.Modal('#forgotModal');
     });
 
-</script><div class="modal fade" id="loginModal" tabindex="-1">
+</script>
+<div class="modal fade" id="loginModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen-sm-down modal-lg">
         <div class="modal-content register-container">
             <form action="?nojs=1&act=login" method="post" data-bind="submit: checkLogin" id="loginbox">
@@ -3184,7 +3193,7 @@
                                        class="w-100"
                                        data-bind="value: user_password,valueUpdate: 'afterkeydown', css: {completed: user_password().length > 0}, style: { 'border-color': formErrors() ? 'red' : '#717171' }">
 
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                             </div>
 
                             <div class="pure-controls mt-0 text-end">
@@ -3208,8 +3217,10 @@
 
                                     <hr class="border border-1 opacity-50 mx-3">
 
-                                    <a href="/?module=Homepage.Social&action=Authenticate&provider=Facebook"  class="btn btn-big btn-fblue w-100">
-                                        <i class="fa fa-facebook-square" style="margin-right: 15px;"></i>Login with Facebook
+                                    <a href="/?module=Homepage.Social&action=Authenticate&provider=Facebook"
+                                       class="btn btn-big btn-fblue w-100">
+                                        <i class="fa fa-facebook-square" style="margin-right: 15px;"></i>Login with
+                                        Facebook
                                     </a>
                                 </div>
                             </div>
@@ -3220,11 +3231,10 @@
             </form>
 
 
-
-
         </div>
     </div>
-</div><div class="modal fade" id="signupModal" tabindex="-1">
+</div>
+<div class="modal fade" id="signupModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen-sm-down modal-lg">
         <div class="modal-content register-container">
             <form id="register-form" data-bind="submit: doRegister" action="#" method="POST">
@@ -3262,7 +3272,8 @@
 
                                 <div class="col-12 col-md-6">
                                     <button type="submit"
-                                            class="btn btn-big btn-action">Register</button>
+                                            class="btn btn-big btn-action">Register
+                                    </button>
                                 </div>
 
                             </div>
@@ -3274,12 +3285,13 @@
                                     <a href="#fb-login"
                                        data-href="/?module=Homepage.Social&action=Authenticate&provider=Facebook"
                                        data-bind="click: doFacebookLogin" class="btn btn-big btn-fblue w-100">
-                                        <i class="fa fa-facebook-square" style="margin-right: 15px;"></i>Register with Facebook
+                                        <i class="fa fa-facebook-square" style="margin-right: 15px;"></i>Register with
+                                        Facebook
                                     </a>
                                 </div>
                             </div>
 
-                             @csrf
+                            @csrf
 
                         </div>
                     </div>
@@ -3287,11 +3299,10 @@
             </form>
 
 
-
-
         </div>
     </div>
-</div><script type="text/javascript">
+</div>
+<script type="text/javascript">
     var flashError = 'Error';
     var flashSuccess = 'Success';
 </script>
@@ -3302,7 +3313,7 @@
     hmessage.errors = hmessage.errors || [];
     hmessage.success = hmessage.success || [];
 
-    hmessage.promptErrors = function(errors) {
+    hmessage.promptErrors = function (errors) {
         if (!(errors instanceof Array)) {
             return;
         }
@@ -3311,15 +3322,15 @@
             return;
         }
 
-        $.each(errors, function(index, value) {
+        $.each(errors, function (index, value) {
             errors[index] = '<div class="box-content box-error"><font COLOR="#FFF">' + value + '</font></div>';
         });
 
-        $.prompt([{title: '<span class="box-title box-error">'+flashError+'</span>', html: errors.join("")}]);
+        $.prompt([{title: '<span class="box-title box-error">' + flashError + '</span>', html: errors.join("")}]);
 
     };
 
-    hmessage.promptSuccess = function(success) {
+    hmessage.promptSuccess = function (success) {
         if (!(success instanceof Array)) {
             return;
         }
@@ -3328,17 +3339,15 @@
             return;
         }
 
-        $.each(success, function(index, value) {
+        $.each(success, function (index, value) {
             success[index] = '<div class="box-content box-success text-white">' + value + '</div>';
         });
 
-        $.prompt([{title: '<span class="box-title box-success">'+flashSuccess+'</span>', html: success.join("")}]);
+        $.prompt([{title: '<span class="box-title box-success">' + flashSuccess + '</span>', html: success.join("")}]);
 
     };
 
 </script>
-
-
 
 
 <script type='text/javascript'>
@@ -3364,13 +3373,15 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190495068-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'UA-190495068-1');
 </script>
-
-
 
 
 <script type="application/ld+json">
@@ -3382,7 +3393,8 @@
             "url": "https://barafranca.com",
             "sameAs": "https://www.facebook.com/Omerta3/"
         }
-    </script>
+
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
