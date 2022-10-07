@@ -37,7 +37,7 @@ class ModulesController extends Controller
             switch ($module) {
                 case 'Homepagelogin';
 
-                     return $this->Login($request, 'teste', 10);
+                     return $this->Login($request, 'Login Teste', 10);
 
                     break;
                 case 'Homepageregister';
