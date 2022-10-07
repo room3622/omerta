@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 
+
 class ModulesController extends Controller
 {
 
@@ -77,9 +78,15 @@ class ModulesController extends Controller
             } else {
 
 
+
+
+
+
+
+
                 //return view("game");
-                return view('login');
-                //return view("data");
+                //return view('login');
+                return view("data");
                 //return view("Carater");
             }
 
@@ -89,6 +96,13 @@ class ModulesController extends Controller
 
     }
 
+
+    public function build()
+    {
+        return $this->from('example@example.com', 'Example')
+            ->subject('Order Shipped')
+            ->view('emails.orders.shipped');
+    }
 
     public function Login(Request $request, $msg = null, $code = null)
     {
