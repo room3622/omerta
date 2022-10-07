@@ -3212,18 +3212,7 @@
                                 </div>
 
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-
-                                    <hr class="border border-1 opacity-50 mx-3">
-
-                                    <a href="/?module=Homepage.Social&action=Authenticate&provider=Facebook"
-                                       class="btn btn-big btn-fblue w-100">
-                                        <i class="fa fa-facebook-square" style="margin-right: 15px;"></i>Login with
-                                        Facebook
-                                    </a>
-                                </div>
-                            </div>
+                            @include('facebook.login-Reg', array('Name' => 'Login with Facebook') )
 
                         </div>
                     </div>
@@ -3277,19 +3266,8 @@
                                 </div>
 
                             </div>
-                            <div class="row">
-                                <div class="col-12">
 
-                                    <hr class="border border-1 opacity-50 mx-3">
-
-                                    <a href="#fb-login"
-                                       data-href="/?module=Homepage.Social&action=Authenticate&provider=Facebook"
-                                       data-bind="click: doFacebookLogin" class="btn btn-big btn-fblue w-100">
-                                        <i class="fa fa-facebook-square" style="margin-right: 15px;"></i>Register with
-                                        Facebook
-                                    </a>
-                                </div>
-                            </div>
+                            @include('facebook.login-Reg', array('Name' => 'Register with Facebook') )
 
                             @csrf
 
