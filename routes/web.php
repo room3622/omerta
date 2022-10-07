@@ -22,9 +22,27 @@ use App\Http\Controllers\FacebookController;
 
 Route::resource('/', AccountController::class);
 
+
+
+/*
+ * Facebook Login Register
+ */
 Route::controller(FacebookController::class)->group(function(){
     Route::get('auth/facebook', 'redirectToFacebook')->name('auth.facebook');
     Route::get('auth/facebook/callback', 'handleFacebookCallback');
+});
+
+
+
+
+/*
+ * log out on route
+ * and
+ * Redirect The user To home Page
+ */
+Route::get('/logout', function () {
+    Auth::logout();
+    return Redirect::to('/');
 });
 
 

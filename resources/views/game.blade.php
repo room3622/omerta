@@ -126,7 +126,7 @@
 
                 <li class="pull-right icon" style="padding-right: 52px;">
                     <a title="Logout"
-                       data-bind="click: function() { window.location = '/logout.php'; }"
+                       data-bind="click: function() { window.location = '/logout'; }"
                        href="javascript:void(0)"><i class="icon icon-power-off"></i></a>
                 </li>
 
