@@ -11,6 +11,7 @@ use App\Http\Controllers\ModulesController;
 
 class AccountController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
