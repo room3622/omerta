@@ -12,7 +12,7 @@
 
 <h2><p align="center">Set up Steps</p></h2>
 
-
+<p>
 <br>
 <br>
 1  run  git Clone https://github.com/room3622/omerta.git . 
@@ -34,11 +34,14 @@
 <br>
 <br> 
 6 run  php artisan migrate:refresh --seed
-
-
-
 </p>
 
+<h2><p align="center">
+Login = oteu@email.com
+<br>
+Password = password
+
+</p></h2>
 
 
 <p align="center"><a href="https://github.com/room3622/omerta/blob/main/printscreen/Screenshot 2022-10-06 at 16.32.41.png" target="_blank"><img src="https://github.com/room3622/omerta/blob/main/printscreen/Screenshot 2022-10-06 at 16.32.41.png"></a></p>
