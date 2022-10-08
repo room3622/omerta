@@ -7,8 +7,9 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
-
+use App\Http\Controllers\MailGunController;
+use League\Flysystem\Config;
+use App\Http\Controllers\RegisterController;
 
 class ModulesController extends Controller
 {
@@ -34,13 +35,14 @@ class ModulesController extends Controller
 
 
 
+                //MailGunController::Sendmail("room3622@gmail.com");
 
-
+                //MailGunController::Register('room3622@gmail.com');
 
 
                 //return view("game");
                 return view('login');
-                //return view("data");
+                //eturn view("data");
                 //return view("Carater");
             }
 
@@ -76,7 +78,7 @@ class ModulesController extends Controller
             switch ($module) {
                 case 'Homepagelogin';
 
-                    return $this->Login($request, 'Login Teste', 10);
+                    return $this->Login($request);
 
 
                     break;
@@ -120,40 +122,32 @@ class ModulesController extends Controller
 
 
 
-    public function Login(Request $request, $msg = null, $code = null)
+    public function Login(Request $request)
     {
 
 
-        // The user is logged in...
 
-        $users = DB::table('users')->get();
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->pass])) {
 
-        foreach ($users as $user) {
-            //var_dump($user->email);
+
+            $request->session()->regenerate();
+
+
+
+            $code = 0;
+            return RenderController::Render($request, '', $code);
+            return redirect()->intended('/');
+
+        }else{
+
+            $msg = "na na !";
+            $code = 10;
+            return RenderController::Render($request, $msg, $code);
         }
 
 
-        if (Auth::check()) {
-
-        }
-
-        //abort(404);
 
 
-        /*
-         * login function in order to log in the user
-         * this is a test maybe to be improved
-         */
-
-        // working checking credentials
-
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'pass' => ['required'],
-        ]);
-
-
-        return RenderController::Render($request, $msg, $code);
 
     }
 
@@ -182,6 +176,9 @@ class ModulesController extends Controller
              * then insert data to the database
              *
              */
+
+
+           return RegisterController::Register($request);
         }
 
 

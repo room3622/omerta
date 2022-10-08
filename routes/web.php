@@ -5,6 +5,8 @@ use App\Http\Controllers\AccountController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ModulesController;
 use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\MailGunController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +18,6 @@ use App\Http\Controllers\FacebookController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 
 Route::resource('/', AccountController::class);
 

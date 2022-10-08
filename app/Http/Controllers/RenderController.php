@@ -10,14 +10,26 @@ class RenderController extends Controller
 
 
 
+
+
     public static function Render($request, $msg=null,$code=null){
 
 
-        if(isset($msg)){
-            $msg = array('message' =>"$msg");
+
+        if($code===0){
+
+            $msg = array(
+                'success' =>"$msg",
+                "forward"=>"/"
+            );
+
         }else{
-            $msg = array();
+
+            $msg = array('message' =>"$msg");
+
         }
+
+
 
 
 
