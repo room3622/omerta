@@ -22,9 +22,9 @@ class RegisterController extends Controller
 
         $password_GEN = RegisterController::Passgen();
 
+
         $newUser = User::updateOrCreate(['email' => $request->email],[
             'email'=> $request->mail,
-
             'password'=>Hash::make($password_GEN),
             'mailme'=>$request->mailme
 

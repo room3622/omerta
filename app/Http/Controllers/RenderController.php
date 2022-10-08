@@ -23,8 +23,11 @@ class RenderController extends Controller
                 "forward"=>"/"
             );
 
-        }else{
+        }elseif($code===10){
 
+            $msg = array('message' =>"$msg");
+
+        }else{
             $msg = array('message' =>"$msg");
 
         }

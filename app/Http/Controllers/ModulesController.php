@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\MailGunController;
 use League\Flysystem\Config;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RecoverController;
 
 class ModulesController extends Controller
 {
@@ -24,6 +25,7 @@ class ModulesController extends Controller
 
 
                 return view('game');
+                //return view("Carater");
 
 
             }elseif(!Auth::check()) {
@@ -43,7 +45,7 @@ class ModulesController extends Controller
                 //return view("game");
                 return view('login');
                 //eturn view("data");
-                //return view("Carater");
+
             }
 
 
@@ -69,6 +71,8 @@ class ModulesController extends Controller
             $module = Str::lower($module);
             $module = ucfirst($module);
 
+            $action = $request->action;
+
 
             /*
              * switch case to get url modules
@@ -78,7 +82,16 @@ class ModulesController extends Controller
             switch ($module) {
                 case 'Homepagelogin';
 
+                if($request->action ==="Forgottenpassword"){
+
+                    return RecoverController::RecoverPassword($request);
+
+                }else{
+
                     return $this->Login($request);
+
+                }
+
 
 
                     break;
@@ -86,10 +99,6 @@ class ModulesController extends Controller
                     return $this->Register($request, 'resgister Moduler', 200);
                     break;
 
-                case 'Homepagesocial';
-
-                    echo 'facebook Login Register';
-                    break;
 
                 case 'Servicesaccount';
 

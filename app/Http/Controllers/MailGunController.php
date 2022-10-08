@@ -26,6 +26,13 @@ class MailGunController extends Controller
     }
 
 
+
+
+    public static function RecoverPassword($to, $pass){
+
+    }
+
+
     public static function Register($to, $pass){
 
         $data["email"] = $to;

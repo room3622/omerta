@@ -3147,6 +3147,7 @@
 
                                 <div class="col-12 col-md-6">
                                     <button type="submit" class="w-100 btn btn-action">Recover</button>
+                                    @csrf
 
                                 </div>
 

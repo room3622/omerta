@@ -33,7 +33,7 @@ Set up Steps
 6 run  php artisan  key:generate
 <br>
 <br> 
-6 run  php artisan migrate
+6 run  php artisan migrate:refresh --seed
 
 
 
