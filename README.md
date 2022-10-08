@@ -10,9 +10,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+<h2><p align="center">Set up Steps</p></h2>
 
-<p>
-Set up Steps 
+
 <br>
 <br>
 1  run  git Clone https://github.com/room3622/omerta.git . 
