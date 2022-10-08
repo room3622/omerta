@@ -86,6 +86,12 @@ class ModulesController extends Controller
 
                     return RecoverController::RecoverPassword($request);
 
+                }elseif($request->action ==="RecoverPassword"){
+
+
+
+                  return RecoverController::FinalReset($request);
+
                 }else{
 
                     return $this->Login($request);

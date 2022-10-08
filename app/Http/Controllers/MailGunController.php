@@ -28,7 +28,23 @@ class MailGunController extends Controller
 
 
 
-    public static function RecoverPassword($to, $pass){
+    public static function RecoverPassword($to, $token,$ip){
+
+
+        $data["ip"] = $ip;
+        $data["email"] = $to;
+        $data["token"] = $token;
+        $data["title"] = "A tua informação de login do ".env('APP_NAME');
+
+        Mail::send( 'emails.RecoverSetp1', $data, function($message)use($data) {
+
+            $message->from(env('MAIL_FROM'),env('APP_NAME'));
+
+            $message->to($data["email"], $data["email"])->subject($data["title"]);
+
+
+        });
+        return 1;
 
     }
 

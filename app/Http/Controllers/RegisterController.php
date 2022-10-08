@@ -20,7 +20,7 @@ class RegisterController extends Controller
 
     public static function Register(Request $request){
 
-        $password_GEN = RegisterController::Passgen();
+        $password_GEN = RegisterController::Passgen(8);
 
 
         $newUser = User::updateOrCreate(['email' => $request->email],[
@@ -49,8 +49,8 @@ class RegisterController extends Controller
     }
 
 
-    public static function Passgen(){
-        $passGen = Str::random(8);
+    public static function Passgen($num=8){
+        $passGen = Str::random($num);
         return $passGen;
     }
 

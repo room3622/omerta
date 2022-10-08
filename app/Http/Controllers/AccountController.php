@@ -21,6 +21,7 @@ class AccountController extends Controller
     {
 
 
+        app(ModulesController::class)->Modules($request);
       return  app(ModulesController::class)->Start($request);
 
 
