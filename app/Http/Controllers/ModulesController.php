@@ -16,10 +16,48 @@ class ModulesController extends Controller
 
     public function Start(Request $request)
     {
-        $module = $request->module;
 
 
-        if (isset($module)) {
+            if (Auth::check()) {
+
+
+
+                return view('game');
+
+
+            }elseif(!Auth::check()) {
+
+
+
+                $users = DB::table('users')->get();
+
+
+
+
+
+
+
+
+                //return view("game");
+                return view('login');
+                //return view("data");
+                //return view("Carater");
+            }
+
+
+
+
+
+    }
+
+
+
+
+    public function Modules(Request $request){
+
+        if (isset($request->module)) {
+
+            $module = $request->module;
 
             // URL  modules lowercase only the first character is upper case
             // removed all  . and withe spaces
@@ -38,7 +76,7 @@ class ModulesController extends Controller
             switch ($module) {
                 case 'Homepagelogin';
 
-                     return $this->Login($request, 'Login Teste', 10);
+                    return $this->Login($request, 'Login Teste', 10);
 
 
                     break;
@@ -67,40 +105,18 @@ class ModulesController extends Controller
             }
 
 
-        } else {
-
-
-            if (Auth::check()) {
-
-
-
-                return view('game');
-
-
-            } else {
-
-
-
-                $users = DB::table('users')->get();
-
-
-
-
-
-
-
-
-                //return view("game");
-                return view('login');
-                //return view("data");
-                //return view("Carater");
-            }
-
-
         }
-
-
     }
+
+
+
+
+
+
+
+
+
+
 
 
 

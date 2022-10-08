@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Account;
 use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use App\Http\Controllers\ModulesController;
 
@@ -18,7 +19,6 @@ class AccountController extends Controller
      */
     public function index(Request $request)
     {
-
 
 
       return  app(ModulesController::class)->Start($request);
@@ -48,18 +48,13 @@ class AccountController extends Controller
     public function store(Request $request)
     {
 
+        /*
+         * URL Modules post only
+         *
+         */
 
 
-     return  app(ModulesController::class)->Start($request);
-
-
-
-
-
-
-
-
-        //
+     return  app(ModulesController::class)->Modules($request);
 
     }
 

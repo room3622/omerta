@@ -3852,7 +3852,7 @@ if (!Function.prototype.bind) {
             return jid ? jid.split("/")[0] : null;
         },
         log: function (level, msg) {
-
+            return;
         },
         debug: function (msg) {
             this.log(this.LogLevel.DEBUG, msg);
@@ -4154,13 +4154,13 @@ if (!Function.prototype.bind) {
         }, attach: function (jid, sid, rid, callback, wait, hold, wind) {
             this._proto._attach(jid, sid, rid, callback, wait, hold, wind);
         }, xmlInput: function (elem) {
-
+            return;
         }, xmlOutput: function (elem) {
-
+            return;
         }, rawInput: function (data) {
-
+            return;
         }, rawOutput: function (data) {
-
+            return;
         }, send: function (elem) {
             if (elem === null) {
                 return;
@@ -5327,7 +5327,7 @@ Strophe.Websocket.prototype = {
         this._conn._doDisconnect();
         return true;
     }, _reset: function () {
-
+        return;
     }, _connect: function () {
         this._closeSocket();
         this.socket = new WebSocket(this._conn.service, "xmpp");
@@ -5383,7 +5383,7 @@ Strophe.Websocket.prototype = {
             this._conn.xmlInput(document.createElement("stream:stream"));
             this._conn._changeConnectStatus(Strophe.Status.CONNFAIL, "Received closing stream");
             this._conn._doDisconnect();
-
+            return;
         } else {
             var string = this._streamWrap(message.data);
             var elem = new DOMParser().parseFromString(string, "text/xml").documentElement;
@@ -7706,7 +7706,7 @@ Strophe.Websocket.prototype = {
                     if (tipsy.hoverState == 'in') tipsy.show();
                 }, options.delayIn);
             }
-        }
+        };
 
         function leave() {
             var tipsy = get(this);
@@ -7718,7 +7718,7 @@ Strophe.Websocket.prototype = {
                     if (tipsy.hoverState == 'out') tipsy.hide();
                 }, options.delayOut);
             }
-        }
+        };
         if (!options.live) this.each(function () {
             get(this);
         });
@@ -10308,7 +10308,7 @@ Strophe.Websocket.prototype = {
                 }
 
                 function imgSum() {
-                    var total = 0;
+                    var total = 0
                     if (o.advanced.updateOnImageLoad) {
                         total = mCSB_container.find("img").length;
                     }
@@ -12108,7 +12108,7 @@ Strophe.Websocket.prototype = {
     return window.noty;
 });
 var O3Global = new function () {
-};;
+}
 var AjaxCodeConfig = new function () {
     this.STRUCTURAL_NO_XML = 1;
     this.STRUCTURAL_NO_JSON = 1;
@@ -12117,7 +12117,7 @@ var AjaxCodeConfig = new function () {
     this.OK = 0;
     this.ERROR = 10;
     this.NO_LOGIN = 20;
-};;
+}
 var Ozone = new function () {
     var iTimeDiff = 0;
     this.BASE_LINK = "/?module=";
@@ -12139,10 +12139,10 @@ var Ozone = new function () {
     setServerTime(1409069052);
     this.setServerTime = setServerTime;
     this.getServerTime = getServerTime;
-};;
+}
 var O3Repository = new function () {
     var iCounter = -1;
-    var aRepository = [];
+    var aRepository = new Array();
 
     function add(oItem) {
         aRepository[++iCounter] = oItem;
@@ -12164,7 +12164,7 @@ var O3Repository = new function () {
     }
 
     function reset() {
-        aRepository = [];
+        aRepository = new Array();
         iCounter = -1;
     }
 
@@ -12173,7 +12173,7 @@ var O3Repository = new function () {
     this.get = get;
     this.remove = remove;
     this.reset = reset;
-};;
+}
 var JSON;
 if (!JSON) {
     JSON = {};
@@ -12375,7 +12375,7 @@ var O3AjaxHandler = new function () {
     this.setDecPendingHandler = setDecPendingHandler;
     this.incrementPending = incrementPending;
     this.decrementPending = decrementPending;
-};;
+}
 if (AjaxCodeConfig.STRUCTURAL_NO_XML)
     O3AjaxHandler.setGlobalHandler(AjaxCodeConfig.STRUCTURAL_NO_XML, function (oResponse) {
         alert('Structural error: no XML');
@@ -12392,7 +12392,7 @@ if (AjaxCodeConfig.ERROR) {
     var fncHandleError = function (oResponse) {
         var sMessage = oResponse.getElementsByTagName('message')[0].firstChild.data;
         alert(sMessage);
-    };
+    }
     O3AjaxHandler.setGlobalHandler(AjaxCodeConfig.ERROR, fncHandleError);
 }
 var O3JsonHandler = new function () {
@@ -12421,7 +12421,7 @@ var O3JsonHandler = new function () {
     this.handle = handle;
     this.setGlobalPreHandler = setGlobalPreHandler;
     this.setGlobalHandler = setGlobalHandler;
-};;
+}
 if (AjaxCodeConfig.STRUCTURAL_NO_JSON)
     O3JsonHandler.setGlobalHandler(AjaxCodeConfig.STRUCTURAL_NO_JSON, function (oResponse) {
         alert('Structural error: no JSON');
@@ -12438,7 +12438,7 @@ if (AjaxCodeConfig.ERROR) {
     var fncHandleError = function (oResponse) {
         var sMessage = oResponse.message;
         alert(sMessage);
-    };
+    }
     O3JsonHandler.setGlobalHandler(AjaxCodeConfig.ERROR, fncHandleError);
 }
 
@@ -12467,7 +12467,7 @@ function O3Ajax() {
         if (oXML == null)
             return false;
         oXML.onreadystatechange = callback;
-        aPostData = [];
+        aPostData = new Array();
         return true;
     }
 
@@ -12485,7 +12485,7 @@ function O3Ajax() {
     }
 
     function clearPostData() {
-        aPostData = [];
+        aPostData = new Array();
     }
 
     function buildPostData() {
@@ -12872,7 +12872,7 @@ O3Global.DOM = new function () {
     this.scrollVertical = scrollVertical;
     this.setClass = setClass;
     this.setImageOpacity = setImageOpacity;
-};;
+}
 O3Global.Types = new function () {
     function validateEmail(sEmail) {
         var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -12949,9 +12949,9 @@ O3Global.Types = new function () {
     this.arrayCompare = arrayCompare;
     this.isNumeric = isNumeric;
     this.encodeURL = encodeURL;
-};;
+}
 O3Global.Ajax = new function () {
-    var aPages = [];
+    var aPages = new Array();
 
     function loadDiv(sModule, sAction, sDiv, vPostData, fncCallback, bForceReload) {
         if (sDiv == 'topbar')
@@ -12972,7 +12972,7 @@ O3Global.Ajax = new function () {
                 }
             }
         }
-        aPages[sDiv] = [];
+        aPages[sDiv] = new Array();
         aPages[sDiv]['module'] = sModule;
         aPages[sDiv]['action'] = sAction;
         aPages[sDiv]['postdata'] = vPostData;
@@ -13073,7 +13073,7 @@ O3Global.Ajax = new function () {
     this.loadJSON = loadJSON;
     this.deserializeXML = deserializeXML;
     this.clearEntry = clearEntry;
-};;
+}
 O3Global.Forms = new function () {
     var TYPE_UNKNOWN = 0;
     var TYPE_TEXT = 1;
@@ -13085,8 +13085,8 @@ O3Global.Forms = new function () {
     function serializeForm(frmSerialize) {
         if (!frmSerialize)
             return null;
-        var aData = [];
-        var aRadio = [];
+        var aData = new Array();
+        var aRadio = new Array();
         for (var sElement in frmSerialize.elements) {
             var hElement = frmSerialize.elements[sElement];
             if (hElement == null)
@@ -13170,7 +13170,7 @@ O3Global.Forms = new function () {
     this.enableForm = enableForm;
     this.disableForm = disableForm;
     this.getRadioValue = getRadioValue;
-};;
+}
 
 function ProgBar(sPBId) {
     var sId = '';
@@ -14840,7 +14840,7 @@ function ProgBar(sPBId) {
             this.hTLV = null, this.isModified = !0, this.asn1Array = t
         }, this.appendASN1Object = function (t) {
             this.hTLV = null, this.isModified = !0, this.asn1Array.push(t)
-        }, this.asn1Array = [], void 0 !== t && void 0 !== t.array && (this.asn1Array = t.array)
+        }, this.asn1Array = new Array, void 0 !== t && void 0 !== t.array && (this.asn1Array = t.array)
     }, W.lang.extend(tt.asn1.DERAbstractStructured, tt.asn1.ASN1Object), tt.asn1.DERBoolean = function () {
         tt.asn1.DERBoolean.superclass.constructor.call(this), this.hT = "01", this.hTLV = "0101ff"
     }, W.lang.extend(tt.asn1.DERBoolean, tt.asn1.ASN1Object), tt.asn1.DERInteger = function (t) {
@@ -14964,7 +14964,7 @@ function ProgBar(sPBId) {
         }
     }, W.lang.extend(tt.asn1.DERSequence, tt.asn1.DERAbstractStructured), tt.asn1.DERSet = function (t) {
         tt.asn1.DERSet.superclass.constructor.call(this, t), this.hT = "31", this.sortFlag = !0, this.getFreshValueHex = function () {
-            for (var t = [], e = 0; e < this.asn1Array.length; e++) {
+            for (var t = new Array, e = 0; e < this.asn1Array.length; e++) {
                 var i = this.asn1Array[e];
                 t.push(i.getEncodedHex())
             }
@@ -15617,7 +15617,7 @@ function ProgBar(sPBId) {
         },
         onSliderResize: function () {
         }
-    };
+    }
     $.fn.bxSlider = function (options) {
         if (this.length == 0) return this;
         if (this.length > 1) {
@@ -15638,7 +15638,7 @@ function ProgBar(sPBId) {
             if (slider.children.length < slider.settings.minSlides) slider.settings.minSlides = slider.children.length;
             if (slider.children.length < slider.settings.maxSlides) slider.settings.maxSlides = slider.children.length;
             if (slider.settings.randomStart) slider.settings.startSlide = Math.floor(Math.random() * slider.children.length);
-            slider.active = {index: slider.settings.startSlide};
+            slider.active = {index: slider.settings.startSlide}
             slider.carousel = slider.settings.minSlides > 1 || slider.settings.maxSlides > 1;
             if (slider.carousel) slider.settings.preloadImages = 'all';
             slider.minThreshold = (slider.settings.minSlides * slider.settings.slideWidth) + ((slider.settings.minSlides - 1) * slider.settings.slideMargin);
@@ -15665,7 +15665,7 @@ function ProgBar(sPBId) {
                 $(this).data("origStyle", $(this).attr("style"));
             });
             setup();
-        };
+        }
         var setup = function () {
             el.wrap('<div class="' + slider.settings.wrapperClass + '"><div class="bx-viewport"></div></div>');
             slider.viewport = el.parent();
@@ -15716,7 +15716,7 @@ function ProgBar(sPBId) {
                 slider.settings.pager = false;
             }
             loadElements(preloadSelector, start);
-        };
+        }
         var loadElements = function (selector, callback) {
             var total = selector.find('img, iframe').length;
             if (total == 0) {
@@ -15731,7 +15731,7 @@ function ProgBar(sPBId) {
                     if (this.complete) $(this).load();
                 });
             });
-        };
+        }
         var start = function () {
             if (slider.settings.infiniteLoop && slider.settings.mode != 'fade' && !slider.settings.ticker) {
                 var slice = slider.settings.mode == 'vertical' ? slider.settings.minSlides : slider.settings.maxSlides;
@@ -15752,7 +15752,7 @@ function ProgBar(sPBId) {
             if (slider.settings.pager) updatePagerActive(slider.settings.startSlide);
             if (slider.settings.controls) updateDirectionControls();
             if (slider.settings.touchEnabled && !slider.settings.ticker) initTouch();
-        };
+        }
         var getViewportHeight = function () {
             var height = 0;
             var children = $();
@@ -15792,7 +15792,7 @@ function ProgBar(sPBId) {
                 height += parseFloat(slider.viewport.css('padding-top')) + parseFloat(slider.viewport.css('padding-bottom'));
             }
             return height;
-        };
+        }
         var getViewportMaxWidth = function () {
             var width = '100%';
             if (slider.settings.slideWidth > 0) {
@@ -15803,7 +15803,7 @@ function ProgBar(sPBId) {
                 }
             }
             return width;
-        };
+        }
         var getSlideWidth = function () {
             var newElWidth = slider.settings.slideWidth;
             var wrapWidth = slider.viewport.width();
@@ -15816,7 +15816,7 @@ function ProgBar(sPBId) {
                 }
             }
             return newElWidth;
-        };
+        }
         var getNumberSlidesShowing = function () {
             var slidesShowing = 1;
             if (slider.settings.mode == 'horizontal' && slider.settings.slideWidth > 0) {
@@ -15833,7 +15833,7 @@ function ProgBar(sPBId) {
                 slidesShowing = slider.settings.minSlides;
             }
             return slidesShowing;
-        };
+        }
         var getPagerQty = function () {
             var pagerQty = 0;
             if (slider.settings.moveSlides > 0) {
@@ -15841,7 +15841,7 @@ function ProgBar(sPBId) {
                     pagerQty = Math.ceil(slider.children.length / getMoveBy());
                 } else {
                     var breakPoint = 0;
-                    var counter = 0;
+                    var counter = 0
                     while (breakPoint < slider.children.length) {
                         ++pagerQty;
                         breakPoint = counter + getNumberSlidesShowing();
@@ -15852,13 +15852,13 @@ function ProgBar(sPBId) {
                 pagerQty = Math.ceil(slider.children.length / getNumberSlidesShowing());
             }
             return pagerQty;
-        };
+        }
         var getMoveBy = function () {
             if (slider.settings.moveSlides > 0 && slider.settings.moveSlides <= getNumberSlidesShowing()) {
                 return slider.settings.moveSlides;
             }
             return getNumberSlidesShowing();
-        };
+        }
         var setSlidePosition = function () {
             if (slider.children.length > slider.settings.maxSlides && slider.active.last && !slider.settings.infiniteLoop) {
                 if (slider.settings.mode == 'horizontal') {
@@ -15877,7 +15877,7 @@ function ProgBar(sPBId) {
                     if (slider.settings.mode == 'horizontal') setPositionProperty(-position.left, 'reset', 0); else if (slider.settings.mode == 'vertical') setPositionProperty(-position.top, 'reset', 0);
                 }
             }
-        };
+        }
         var setPositionProperty = function (value, type, duration, params) {
             if (slider.usingCSS) {
                 var propValue = slider.settings.mode == 'vertical' ? 'translate3d(0, ' + value + 'px, 0)' : 'translate3d(' + value + 'px, 0, 0)';
@@ -15915,7 +15915,7 @@ function ProgBar(sPBId) {
                     });
                 }
             }
-        };
+        }
         var populatePager = function () {
             var pagerHtml = '';
             var pagerQty = getPagerQty();
@@ -15930,8 +15930,8 @@ function ProgBar(sPBId) {
                 }
                 pagerHtml += '<div class="bx-pager-item"><a href="javascript:void(0)" data-slide-index="' + i + '" class="bx-pager-link">' + linkContent + '</a></div>';
             }
-            slider.pagerEl.html(pagerHtml);
-        };
+            ;slider.pagerEl.html(pagerHtml);
+        }
         var appendPager = function () {
             if (!slider.settings.pagerCustom) {
                 slider.pagerEl = $('<div class="bx-pager" />');
@@ -15945,7 +15945,7 @@ function ProgBar(sPBId) {
                 slider.pagerEl = $(slider.settings.pagerCustom);
             }
             slider.pagerEl.on('click', 'a', clickPagerBind);
-        };
+        }
         var appendControls = function () {
             slider.controls.next = $('<a class="bx-next" href="javascript:void(0)">' + slider.settings.nextText + '</a>');
             slider.controls.prev = $('<a class="bx-prev" href="javascript:void(0)">' + slider.settings.prevText + '</a>');
@@ -15962,7 +15962,7 @@ function ProgBar(sPBId) {
                 slider.controls.directionEl.append(slider.controls.prev).append(slider.controls.next);
                 slider.controls.el.addClass('bx-has-controls-direction').append(slider.controls.directionEl);
             }
-        };
+        }
         var appendControlsAuto = function () {
             slider.controls.start = $('<div class="bx-controls-auto-item"><a class="bx-start" href="">' + slider.settings.startText + '</a></div>');
             slider.controls.stop = $('<div class="bx-controls-auto-item"><a class="bx-stop" href="">' + slider.settings.stopText + '</a></div>');
@@ -15980,7 +15980,7 @@ function ProgBar(sPBId) {
                 slider.controls.el.addClass('bx-has-controls-auto').append(slider.controls.autoEl);
             }
             updateAutoControls(slider.settings.autoStart ? 'stop' : 'start');
-        };
+        }
         var appendCaptions = function () {
             slider.children.each(function (index) {
                 var title = $(this).find('img:first').attr('title');
@@ -15988,25 +15988,25 @@ function ProgBar(sPBId) {
                     $(this).append('<div class="bx-caption"><span>' + title + '</span></div>');
                 }
             });
-        };
+        }
         var clickNextBind = function (e) {
             if (slider.settings.auto) el.stopAuto();
             el.goToNextSlide();
             e.preventDefault();
-        };
+        }
         var clickPrevBind = function (e) {
             if (slider.settings.auto) el.stopAuto();
             el.goToPrevSlide();
             e.preventDefault();
-        };
+        }
         var clickStartBind = function (e) {
             el.startAuto();
             e.preventDefault();
-        };
+        }
         var clickStopBind = function (e) {
             el.stopAuto();
             e.preventDefault();
-        };
+        }
         var clickPagerBind = function (e) {
             if (slider.settings.auto) el.stopAuto();
             var pagerLink = $(e.currentTarget);
@@ -16015,7 +16015,7 @@ function ProgBar(sPBId) {
                 if (pagerIndex != slider.active.index) el.goToSlide(pagerIndex);
                 e.preventDefault();
             }
-        };
+        }
         var updatePagerActive = function (slideIndex) {
             var len = slider.children.length;
             if (slider.settings.pagerType == 'short') {
@@ -16029,7 +16029,7 @@ function ProgBar(sPBId) {
             slider.pagerEl.each(function (i, el) {
                 $(el).find('a').eq(slideIndex).addClass('active');
             });
-        };
+        }
         var updateAfterSlideTransition = function () {
             if (slider.settings.infiniteLoop) {
                 var position = '';
@@ -16050,7 +16050,7 @@ function ProgBar(sPBId) {
             }
             slider.working = false;
             slider.settings.onSlideAfter(slider.children.eq(slider.active.index), slider.oldIndex, slider.active.index);
-        };
+        }
         var updateAutoControls = function (state) {
             if (slider.settings.autoControlsCombine) {
                 slider.controls.autoEl.html(slider.controls[state]);
@@ -16058,7 +16058,7 @@ function ProgBar(sPBId) {
                 slider.controls.autoEl.find('a').removeClass('active');
                 slider.controls.autoEl.find('a:not(.bx-' + state + ')').addClass('active');
             }
-        };
+        }
         var updateDirectionControls = function () {
             if (getPagerQty() == 1) {
                 slider.controls.prev.addClass('disabled');
@@ -16075,7 +16075,7 @@ function ProgBar(sPBId) {
                     slider.controls.next.removeClass('disabled');
                 }
             }
-        };
+        }
         var initAuto = function () {
             if (slider.settings.autoDelay > 0) {
                 var timeout = setTimeout(el.startAuto, slider.settings.autoDelay);
@@ -16095,7 +16095,7 @@ function ProgBar(sPBId) {
                     }
                 });
             }
-        };
+        }
         var initTicker = function () {
             var startPosition = 0;
             if (slider.settings.autoDirection == 'next') {
@@ -16124,7 +16124,7 @@ function ProgBar(sPBId) {
                 });
             }
             tickerLoop();
-        };
+        }
         var tickerLoop = function (resumeSpeed) {
             speed = resumeSpeed ? resumeSpeed : slider.settings.speed;
             var position = {left: 0, top: 0};
@@ -16138,11 +16138,11 @@ function ProgBar(sPBId) {
             var resetValue = slider.settings.mode == 'horizontal' ? -reset.left : -reset.top;
             var params = {resetValue: resetValue};
             setPositionProperty(animateProperty, 'ticker', speed, params);
-        };
+        }
         var initTouch = function () {
-            slider.touch = {start: {x: 0, y: 0}, end: {x: 0, y: 0}};
+            slider.touch = {start: {x: 0, y: 0}, end: {x: 0, y: 0}}
             slider.viewport.bind('touchstart', onTouchStart);
-        };
+        }
         var onTouchStart = function (e) {
             if (slider.working) {
                 e.preventDefault();
@@ -16154,7 +16154,7 @@ function ProgBar(sPBId) {
                 slider.viewport.bind('touchmove', onTouchMove);
                 slider.viewport.bind('touchend', onTouchEnd);
             }
-        };
+        }
         var onTouchMove = function (e) {
             var orig = e.originalEvent;
             var xMovement = Math.abs(orig.changedTouches[0].pageX - slider.touch.start.x);
@@ -16175,7 +16175,7 @@ function ProgBar(sPBId) {
                 }
                 setPositionProperty(value, 'reset', 0);
             }
-        };
+        }
         var onTouchEnd = function (e) {
             slider.viewport.unbind('touchmove', onTouchMove);
             var orig = e.originalEvent;
@@ -16209,7 +16209,7 @@ function ProgBar(sPBId) {
                 }
             }
             slider.viewport.unbind('touchend', onTouchEnd);
-        };
+        }
         var resizeWindow = function (e) {
             if (!slider.initialized) return;
             var windowWidthNew = $(window).width();
@@ -16220,7 +16220,7 @@ function ProgBar(sPBId) {
                 el.redrawSlider();
                 slider.settings.onSliderResize.call(el, slider.active.index);
             }
-        };
+        }
         el.goToSlide = function (slideIndex, direction) {
             if (slider.working || slider.active.index == slideIndex) return;
             slider.working = true;
@@ -16281,39 +16281,39 @@ function ProgBar(sPBId) {
                     setPositionProperty(value, 'slide', slider.settings.speed);
                 }
             }
-        };
+        }
         el.goToNextSlide = function () {
             if (!slider.settings.infiniteLoop && slider.active.last) return;
             var pagerIndex = parseInt(slider.active.index) + 1;
             el.goToSlide(pagerIndex, 'next');
-        };
+        }
         el.goToPrevSlide = function () {
             if (!slider.settings.infiniteLoop && slider.active.index == 0) return;
             var pagerIndex = parseInt(slider.active.index) - 1;
             el.goToSlide(pagerIndex, 'prev');
-        };
+        }
         el.startAuto = function (preventControlUpdate) {
             if (slider.interval) return;
             slider.interval = setInterval(function () {
                 slider.settings.autoDirection == 'next' ? el.goToNextSlide() : el.goToPrevSlide();
             }, slider.settings.pause);
             if (slider.settings.autoControls && preventControlUpdate != true) updateAutoControls('stop');
-        };
+        }
         el.stopAuto = function (preventControlUpdate) {
             if (!slider.interval) return;
             clearInterval(slider.interval);
             slider.interval = null;
             if (slider.settings.autoControls && preventControlUpdate != true) updateAutoControls('start');
-        };
+        }
         el.getCurrentSlide = function () {
             return slider.active.index;
-        };
+        }
         el.getCurrentSlideElement = function () {
             return slider.children.eq(slider.active.index);
-        };
+        }
         el.getSlideCount = function () {
             return slider.children.length;
-        };
+        }
         el.redrawSlider = function () {
             slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
             slider.viewport.css('height', getViewportHeight());
@@ -16324,7 +16324,7 @@ function ProgBar(sPBId) {
                 populatePager();
                 updatePagerActive(slider.active.index);
             }
-        };
+        }
         el.destroySlider = function () {
             if (!slider.initialized) return;
             slider.initialized = false;
@@ -16342,12 +16342,12 @@ function ProgBar(sPBId) {
             if (slider.controls.autoEl) slider.controls.autoEl.remove();
             clearInterval(slider.interval);
             if (slider.settings.responsive) $(window).unbind('resize', resizeWindow);
-        };
+        }
         el.reloadSlider = function (settings) {
             if (settings != undefined) options = settings;
             el.destroySlider();
             init();
-        };
+        }
         init();
         return this;
     }
@@ -18530,7 +18530,7 @@ function ProgBar(sPBId) {
                 } else {
                     return this.opts.width;
                 }
-            }var width = resolveContainerWidth.call(this);
+            };var width = resolveContainerWidth.call(this);
             if (width !== null) {
                 this.container.css("width", width);
             }
@@ -18676,7 +18676,7 @@ function ProgBar(sPBId) {
                         this.clear();
                     }
                     killEvent(e);
-
+                    return;
                 }
             }));
             installKeyUpChangeEvent(this.focusser);
@@ -22294,7 +22294,7 @@ omerta.core.Popup = {
     }, destroy: function () {
         this.element.remove();
     }
-};
+}
 omerta.framework.service = {
     name: 'servicesuper', service: '', interval: 30, timer: null, data: {}, retries: 0, load: function () {
         this.run();
@@ -22453,7 +22453,7 @@ omerta.GUI.container = $.extend({}, omerta.framework.GUI, {
         if (this.isSafeToLoad(_link) === false) {
             _link = this.current;
         }
-        _link = (_link.length > 0) ? _link : '/?module=Rankings';
+        _link = (_link.length > 0) ? _link : '/?module=Rankings'
         this.current = _link;
         $("#game_loading").fadeIn('fast');
         omerta.GUI.container.tabs([]);
@@ -22623,7 +22623,7 @@ omerta.GUI.container = $.extend({}, omerta.framework.GUI, {
         if (!currentModule && typeof (parsedUrl.path) !== 'undefined') {
             var stripExtension = function (str) {
                 return ucfirst(str.replace(/\.[^/.]+$/, ""));
-            };
+            }
             var aPaths = parsedUrl.path.split('/');
             if (aPaths.length >= 2) {
                 currentModule = 'Legacy' + stripExtension(aPaths[1]);
@@ -22848,11 +22848,11 @@ omerta.GUI.helper = {
         }
         return false;
     }, getGradient: function (color1, color2) {
-        var ret = {};
-        ret.color1 = [];
-        ret.color2 = [];
-        ret.steps = [];
-        ret.adder = [];
+        var ret = new Object();
+        ret.color1 = new Array();
+        ret.color2 = new Array();
+        ret.steps = new Array();
+        ret.adder = new Array();
         color1 = color1.replace('#', '');
         ret.color1[0] = parseInt(color1.slice(0, 2), 16), ret.color1[1] = parseInt(color1.slice(2, 4), 16), ret.color1[2] = parseInt(color1.slice(4, 6), 16);
         color2 = color2.replace('#', '');
@@ -22881,7 +22881,7 @@ omerta.GUI.helper = {
             });
         }, 500);
     }
-};
+}
 omerta.GUI.loader = {
     GUI: ['menu', 'container'], GUI_loaded: [], GUI_setup: false, fp_id: 0, dialog_loading_info: function (info) {
         $("#dialog_loading_info").text(info);
@@ -22934,7 +22934,7 @@ omerta.GUI.loader = {
             omerta.GUI.loader.dialog_loading_info('loading ' + _loading);
         }
     }
-};
+}
 omerta.GUI.omerta_bar = {
     name: 'header', load: function () {
     }
@@ -23320,9 +23320,9 @@ function time_left(seconds, bHideSeconds) {
     var str = "";
     var days = Math.floor(seconds / 86400);
     str += (days > 0 ? days + "<span>D</span> " : "");
-    var hours = Math.floor((seconds - (days * 86400)) / 3600);
+    var hours = Math.floor((seconds - (days * 86400)) / 3600)
     str += (hours > 0 ? hours + "<span>H</span> " : "");
-    var minutes = Math.floor((seconds - (days * 86400) - (hours * 3600)) / 60);
+    var minutes = Math.floor((seconds - (days * 86400) - (hours * 3600)) / 60)
     str += (minutes > 0 ? minutes + "<span>M</span> " : "");
     if (!bHideSeconds) {
         var secs = Math.floor((seconds - (days * 86400) - (hours * 3600) - (minutes * 60)));
@@ -23695,9 +23695,9 @@ $.noty.themes.omerta = {
 };
 omerta.plugins.popups = {
     generateForm: function (_module, _action, _info, _requestVars) {
-        var _form = {};
+        var _form = {}
         _form.title = _info.title;
-        _form.buttons = _info.buttons;
+        _form.buttons = _info.buttons
         if (_info.pos)
             _form.position = _info.pos;
         if (_info.focus)
@@ -23746,7 +23746,7 @@ omerta.plugins.popups = {
                 e.preventDefault();
                 return false;
             }
-        };
+        }
         return _form;
     }, isPrompted: function () {
         var $previousPrompt = $.prompt.getPrompt();
@@ -23775,7 +23775,7 @@ omerta.plugins.popups = {
         var $element = $(this), href = $element.data('href'), title = $element.attr('title') || '';
         omerta.plugins.popups.prompt('', {title: title, url: href});
     }
-};
+}
 window.yo = false;
 (function () {
     var hidden = "hidden";
@@ -23821,7 +23821,7 @@ $(document).ready(function () {
         }
     });
     $(document).on('keyup', 'input[type=text][data-number]', function (event) {
-        var parsed = $(this).val().replace(/k/g, '000').replace(/m/g, '000000').replace(/[^0-9\.]+/g, '');
+        var parsed = $(this).val().replace(/k/g, '000').replace(/m/g, '000000').replace(/[^0-9\.]+/g, '')
         $(this).val(parsed);
     });
     $(document).on('click', '*[data-cooldown]', function (event) {
@@ -23992,7 +23992,7 @@ $(document).ready(function () {
             if ($element.closest("#selected").length > 0) {
                 var pageTitle = $element.data('page-title') || $element.text()
             }
-            jqxhr.success(function (response) {
+            ;jqxhr.success(function (response) {
                 if (typeof (response) === 'object' && typeof (response.data) === 'object' && typeof (response.data.title) === 'string') {
                     pageTitle = response.data.title;
                 }
@@ -24081,7 +24081,7 @@ $(window).focus(function () {
 });
 String.prototype.ucfirst = function () {
     return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
-};
+}
 omerta.services.account = $.extend({}, omerta.framework.service, {
     name: 'account',
     service: 'Account',
@@ -24338,7 +24338,7 @@ function enumLocalIPs(cb) {
             if (1 || window.mozRTCPeerConnection) {
                 rtc.createDataChannel('', {reliable: false});
             }
-            rtc.onicecandidate = function (evt) {
+            ;rtc.onicecandidate = function (evt) {
                 if (evt.candidate) grepSDP("a=" + evt.candidate.candidate);
             };
             setTimeout(function () {
@@ -24375,7 +24375,7 @@ function enumLocalIPs(cb) {
             console.error(e);
         }
     })();
-}(function (window) {
+};(function (window) {
     var on, off;
 
     function Webkit() {
@@ -24535,7 +24535,7 @@ function enumLocalIPs(cb) {
             if (1 || window.mozRTCPeerConnection) {
                 rtc.createDataChannel('', {reliable: false});
             }
-            rtc.onicecandidate = function (evt) {
+            ;rtc.onicecandidate = function (evt) {
                 if (evt.candidate) grepSDP("a=" + evt.candidate.candidate);
             };
             setTimeout(function () {
@@ -24572,7 +24572,7 @@ function enumLocalIPs(cb) {
             console.error(e);
         }
     })();
-}(function (window) {
+};(function (window) {
     var on, off;
 
     function Webkit() {
@@ -25953,7 +25953,7 @@ omerta.chat.addEvent = function (event, general) {
     var room = general ? omerta.chat.data.find('omerta.general') : omerta.chat.data.getActiveTab();
     var oMessage = new omerta.chat.model.Message(-1, 'event', '', room.getName(), event, moment.utc());
     room.addMessage(oMessage);
-};
+}
 omerta.chat.data = {
     status: ko.observable(0),
     input: ko.observable(''),
@@ -26252,7 +26252,7 @@ omerta.widgets.Sidepanel.onLocalStorage = function (event) {
                 break;
         }
     }
-};
+}
 omerta.widgets.EOG = _.extend(omerta.core.Widget, {
     showWidget: ko.observable(false),
     showWinner: ko.observable(false),
@@ -26572,7 +26572,7 @@ omerta.modules.Detectives = {
                             total += parseInt($(this).val() * price * hours.eq(index).val(), 10);
                         });
                         totalAmount.text(total);
-                    }
+                    };
 
                     function detectiveHours() {
                         var total = 0;
@@ -26580,7 +26580,7 @@ omerta.modules.Detectives = {
                             total += parseInt(detectives.eq(index).val() * price * $(this).val(), 10);
                         });
                         totalAmount.text(total);
-                    }
+                    };
 
                     function allCitiesDets() {
                         var total = 0;
@@ -26589,7 +26589,7 @@ omerta.modules.Detectives = {
                             total += parseInt(allCities.val() * price * hours.eq(index).val(), 10);
                         });
                         totalAmount.text(total);
-                    }
+                    };
 
                     function allHours() {
                         var total = 0;
@@ -26598,7 +26598,7 @@ omerta.modules.Detectives = {
                             total += parseInt(allCityHours.val() * price * detectives.eq(index).val(), 10);
                         });
                         totalAmount.text(total);
-                    }detectives.change(detectiveAmount);
+                    };detectives.change(detectiveAmount);
                     hours.change(detectiveHours);
                     allCities.change(allCitiesDets);
                     allCityHours.change(allHours);
@@ -26691,7 +26691,7 @@ omerta.modules.Lackeys = {
         }
         $.getJSON('/?module=Lackeys&action=status' + extra, null, omerta.modules.Lackeys.updateCB)
     }, updateCB: function (_data) {
-        var info = _data.data;
+        var info = _data.data
         var updated = true;
         for (lackey in info) {
             if (!info[lackey].change) {
@@ -26900,7 +26900,7 @@ omerta.modules.Lackeys = {
                     }
                 });
             }, transferCars: function (_lackey, _post) {
-                var sCars = [];
+                var sCars = new Array();
                 $("input[name=items_selected]:checked").each(function () {
                     sCars.push($(this).val())
                 });
@@ -27092,7 +27092,7 @@ omerta.modules.User = {
             }
             document.getElementById(div_id).innerHTML = content;
             setTimeout('iframeId.parentNode.removeChild(iframeId)', 250);
-        };
+        }
         if (iframeId.addEventListener)
             iframeId.addEventListener("load", eventHandler, true);
         if (iframeId.attachEvent)
@@ -27775,7 +27775,7 @@ omerta.modules.UserInformation.model.ActionStat = function (data) {
     };
     this.getTip = function () {
         return this.getTitle() + ': ' + this.getValue(false);
-    };
+    }
     this.getValue = function (bShort) {
         if (typeof (bShort) === 'undefined') {
             bShort = false;

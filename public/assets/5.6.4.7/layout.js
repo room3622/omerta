@@ -13922,7 +13922,7 @@ Strophe.Websocket.prototype = {
     };
     return window.noty;
 });
-var O3Global = new function() {};
+var O3Global = new function() {};;
 var AjaxCodeConfig = new function() {
     this.STRUCTURAL_NO_XML = 1;
     this.STRUCTURAL_NO_JSON = 1;
@@ -13931,7 +13931,7 @@ var AjaxCodeConfig = new function() {
     this.OK = 0;
     this.ERROR = 10;
     this.NO_LOGIN = 20;
-};
+};;
 var Ozone = new function() {
     var iTimeDiff = 0;
     this.BASE_LINK = "/?module=";
@@ -13952,7 +13952,7 @@ var Ozone = new function() {
     setServerTime(1409069052);
     this.setServerTime = setServerTime;
     this.getServerTime = getServerTime;
-};
+};;
 var O3Repository = new function() {
     var iCounter = -1;
     var aRepository = [];
@@ -13985,7 +13985,7 @@ var O3Repository = new function() {
     this.get = get;
     this.remove = remove;
     this.reset = reset;
-};
+};;
 var JSON;
 if (!JSON) {
     JSON = {};
@@ -14196,7 +14196,7 @@ var O3AjaxHandler = new function() {
     this.setDecPendingHandler = setDecPendingHandler;
     this.incrementPending = incrementPending;
     this.decrementPending = decrementPending;
-};
+};;
 if (AjaxCodeConfig.STRUCTURAL_NO_XML)
     O3AjaxHandler.setGlobalHandler(AjaxCodeConfig.STRUCTURAL_NO_XML, function(oResponse) {
         alert('Structural error: no XML');
@@ -14241,7 +14241,7 @@ var O3JsonHandler = new function() {
     this.handle = handle;
     this.setGlobalPreHandler = setGlobalPreHandler;
     this.setGlobalHandler = setGlobalHandler;
-};
+};;
 if (AjaxCodeConfig.STRUCTURAL_NO_JSON)
     O3JsonHandler.setGlobalHandler(AjaxCodeConfig.STRUCTURAL_NO_JSON, function(oResponse) {
         alert('Structural error: no JSON');
@@ -14694,7 +14694,7 @@ O3Global.DOM = new function() {
     this.scrollVertical = scrollVertical;
     this.setClass = setClass;
     this.setImageOpacity = setImageOpacity;
-};
+};;
 O3Global.Types = new function() {
     function validateEmail(sEmail) {
         var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -14772,7 +14772,7 @@ O3Global.Types = new function() {
     this.arrayCompare = arrayCompare;
     this.isNumeric = isNumeric;
     this.encodeURL = encodeURL;
-};
+};;
 O3Global.Ajax = new function() {
     var aPages = [];
 
@@ -14899,7 +14899,7 @@ O3Global.Ajax = new function() {
     this.loadJSON = loadJSON;
     this.deserializeXML = deserializeXML;
     this.clearEntry = clearEntry;
-};
+};;
 O3Global.Forms = new function() {
     var TYPE_UNKNOWN = 0;
     var TYPE_TEXT = 1;
@@ -15000,7 +15000,7 @@ O3Global.Forms = new function() {
     this.enableForm = enableForm;
     this.disableForm = disableForm;
     this.getRadioValue = getRadioValue;
-};
+};;
 
 function ProgBar(sPBId) {
     var sId = '';
