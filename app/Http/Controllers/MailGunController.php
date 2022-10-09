@@ -74,16 +74,9 @@ class MailGunController extends Controller
 
     public static function Sendmail($to,$subject='Testing Mailgun'){
 
-
-
         $data["email"] = $to;
         $data["title"] = $subject;
         $data["body"] = "This is Demo";
-
-
-
-
-
 
         Mail::send( 'emails.mailEvent', $data, function($message)use($data) {
 
@@ -91,12 +84,27 @@ class MailGunController extends Controller
 
             $message->to($data["email"], $data["email"])->subject($data["title"]);
 
+        });
+    }
+
+
+    public static function RecoverypasswordFinal($to,$subject,$ip,$pass){
+        $data["ip"] = $ip;
+        $data["pass"] = $pass;
+        $data["email"] = $to;
+        $data["title"] = $subject;
+        $data["body"] = "This is Demo";
+
+        Mail::send( 'emails.RecoverSetp2', $data, function($message)use($data) {
+
+            $message->from(env('MAIL_FROM'),env('APP_NAME'));
+
+            $message->to($data["email"], $data["email"])->subject($data["title"]);
 
         });
-
-
-
+    }
 
 
     }
+
 }

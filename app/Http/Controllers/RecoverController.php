@@ -93,19 +93,93 @@ class RecoverController extends Controller
 
 
     public static function FinalReset($request){
+        /*
+         * Geting Cliant
+         * Token Sent to email
+         * To Validate
+         */
         $token = $request->id;
 
+        /*
+         * Getin User ip adresse
+         */
+        $clientIP = request()->ip();
+
+
+        /*
+         * Generating a password
+         * and living standing by
+         */
+        $password_GEN = RegisterController::Passgen(8);
+
+
+        /*
+         * Query the databese for token
+         * @data will hold the object if existes
+         *
+         */
         $data  = DB::table('password_resets')->where('token', $token)->first();
 
+        /*
+         * if the data existes
+         * lets work on it
+         */
         if ($data){
 
-            $password_GEN = RegisterController::Passgen(8);
 
 
-            //print_r($data);
 
-
+            /*
+             * Quering the user By the token
+             * @data holds infot from the token
+             * it will return the email of the
+             * user that generated the token
+             *==========================================================
+             *
+             * Quering the user from the token puting it on
+             * placeholder @user
+             *
+             * @user now has all information from thi token
+             *
+             */
             $user = DB::table('users')->where('email', $data->email)->first();
+
+
+
+            /*
+             * Sending the email
+             * todo
+             * the viwe file is not finish
+             */
+            MailGunController::RecoverypasswordFinal($user->email,"A tua informação de login do Omerta",$clientIP,$password_GEN);
+
+            /*
+             * using the data from the user
+             * seting the new password
+             */
+            $user->password = $password_GEN;
+
+            /*
+             * Deleting the token
+             * is no needet no more
+             *
+             *
+             */
+            DB::table('password_resets')->where('email', $user->email)->delete();
+
+
+
+            /*
+             * Saving the user new password
+             */
+            $user->save();
+
+            exit();
+
+
+
+
+
             /*
              * todo
              * need to finish
