@@ -11,6 +11,7 @@ use App\Http\Controllers\MailGunController;
 use League\Flysystem\Config;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RecoverController;
+use Illuminate\Support\Carbon;
 
 class ModulesController extends Controller
 {
@@ -18,6 +19,11 @@ class ModulesController extends Controller
 
     public function Start(Request $request)
     {
+
+        self::DeletePasswordResets();
+
+
+
 
 
             if (Auth::check()) {
@@ -42,9 +48,21 @@ class ModulesController extends Controller
                 //MailGunController::Register('room3622@gmail.com');
 
 
+
+                //$data   = DB::table('password_resets')->get();
+
+
+
+
+
+
+
+
+
+
                 //return view("game");
                 return view('login');
-                //eturn view("data");
+                //return view("data");
 
             }
 
@@ -276,6 +294,16 @@ class ModulesController extends Controller
     {
         //
     }
+
+
+    public static function DeletePasswordResets($minuts=60){
+        DB::table('password_resets')
+            ->where('created_at', '<', Carbon::now()->subMinutes($minuts)->toDateTimeString())
+            ->delete();
+
+    }
+
+
 
 
     public function outputdatajson($data)
