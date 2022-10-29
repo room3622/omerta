@@ -30,8 +30,8 @@ class ModulesController extends Controller
 
 
 
-                return view('game');
-                //return view("Carater");
+                //return view('game');
+                return view("Carater");
 
 
             }elseif(!Auth::check()) {
@@ -80,6 +80,13 @@ class ModulesController extends Controller
         if (isset($request->module)) {
 
             $module = $request->module;
+
+
+            /*
+             * this moduler  needs big fix
+             * OOP need big improve maybe to a class on its alone
+             */
+
 
             // URL  modules lowercase only the first character is upper case
             // removed all  . and withe spaces

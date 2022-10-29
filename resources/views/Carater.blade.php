@@ -120,7 +120,7 @@
         <ul class="top-tabs">
             <li><a href="javascript:void(0)" data-bind="click: setTabSettings">Minhas Definições</a></li>
             <li><a href="javascript:void(0)" data-bind="click: setTabDead">Dead Accounts</a></li>
-            <li><a href="/logout.php">Desligar Sessão</a></li>
+            <li><a href="/logout">Desligar Sessão</a></li>
         </ul>
     </div>
 
@@ -242,7 +242,7 @@
                            data-bind="click: omerta.open, attr: {disabled: bLoading()}" type="submit"
                            value="Let's Roll!">
                     <input class="btn btn-big btn-red"
-                           onclick="window.location = '/logout.php';" type="button"
+                           onclick="window.location = '/logout';" type="button"
                            value="Desligar Sessão">
                 </div>
                 <div class="clearfix"></div>
