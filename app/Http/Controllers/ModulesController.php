@@ -43,9 +43,9 @@ class ModulesController extends Controller
 
 
 
-                //MailGunController::Sendmail("room3622@gmail.com");
+                //MailGunController::Sendmail("mail@gmail.com");
 
-                //MailGunController::Register('room3622@gmail.com');
+                //MailGunController::Register('mail@gmail.com');
 
 
 
@@ -73,8 +73,12 @@ class ModulesController extends Controller
     }
 
 
-
-
+    /**
+     * Handle various module-related actions based on the request.
+     *
+     * @param Request $request The HTTP request containing module and action information.
+     * @return mixed
+     */
     public function Modules(Request $request){
 
         if (isset($request->module)) {
@@ -137,6 +141,54 @@ class ModulesController extends Controller
 
 
                 case 'Servicesmenu';
+
+                    break;
+
+                case 'Account' and $action ==="FooterEndpoint" ;
+
+                //todo
+
+                exit();
+
+                    break;
+
+
+                case 'Account' and $action === "AliveUserEndpoint" ;
+                    //todo
+
+                    /*
+                    {"bLoading":false,"bNewUser":true,"aPreviews":[]}
+
+
+                    */
+
+                    $msg = "na na !";
+                    $code = 10;
+                    //return RenderController::Render($request, $msg, $code);
+
+
+
+                /*
+                 * this returns proper json very good
+                 */
+
+                $data = array();
+                $data['bLoading'] = false;
+                $data['bNewUser'] = true;
+                 return   response()->json($data)->send();
+
+                    die();
+
+
+                    break;
+
+
+
+
+                case 'Homepage.Reset' and $action ==="hof" ;
+                    //todo
+
+                    exit();
 
                     break;
 

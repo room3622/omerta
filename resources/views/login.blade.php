@@ -3353,8 +3353,8 @@
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Omerta",
-            "alternateName": "Barafranca",
-            "url": "https://barafranca.com",
+            "alternateName": "{{ config('app.name') }}",
+            "url": "{{ config('app.name') }}.uk",
             "sameAs": "https://www.facebook.com/Omerta3/"
         }
 
