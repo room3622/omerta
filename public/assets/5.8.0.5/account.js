@@ -5877,6 +5877,7 @@ omerta.model.Character = function (oData) {
         }
 
         self.bLoading(true);
+
         var $jqxhr = $.ajax({
             type: 'POST',
             dataType: "json",
@@ -6536,4 +6537,15 @@ $(document).ready(function () {
 
     omerta.loadUser();
 
+
+
+
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
 });
+

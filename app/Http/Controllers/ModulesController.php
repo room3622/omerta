@@ -12,10 +12,15 @@ use League\Flysystem\Config;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RecoverController;
 use Illuminate\Support\Carbon;
+use ReCaptcha\RequestMethod\Post;
 
 class ModulesController extends Controller
 {
 
+
+    public function __construct()
+    {
+    }
 
     public function Start(Request $request)
     {
@@ -32,6 +37,7 @@ class ModulesController extends Controller
 
                 //return view('game');
                 return view("Carater");
+
 
 
             }elseif(!Auth::check()) {
@@ -83,6 +89,8 @@ class ModulesController extends Controller
 
         if (isset($request->module)) {
 
+
+
             $module = $request->module;
 
 
@@ -103,12 +111,24 @@ class ModulesController extends Controller
             $action = $request->action;
 
 
+
             /*
              * switch case to get url modules
              * to be improved to OOP
              */
 
             switch ($module) {
+
+              case "Account" and $action ==="create" ;
+
+
+
+            
+
+
+              break;
+
+
                 case 'Homepagelogin';
 
                 if($request->action ==="Forgottenpassword"){
@@ -146,52 +166,88 @@ class ModulesController extends Controller
 
                 case 'Account' and $action ==="FooterEndpoint" ;
 
-                //todo
+                /*
+                 * todo Repair nedet ASP
+                 */
 
-                exit();
+                    $deceasedCharacters = [
+                        ["name" => "5.44Room", "cleanName" => "Room", "killDate" => "13/12/2022", "rank" => "Chief", "gender" => 1, "version" => 5.44, "isHallOfFame" => false],
+                        ["name" => "5.29Room", "cleanName" => "Room", "killDate" => "22/03/2021", "rank" => "Pickpocket", "gender" => 1, "version" => 5.29, "isHallOfFame" => false],
+                        ["name" => "5.19Game", "cleanName" => "Game", "killDate" => "07/01/2020", "rank" => "Chief", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
+                        ["name" => "5.19Lm", "cleanName" => "Lm", "killDate" => "03/01/2020", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
+                        ["name" => "5.19Alarm", "cleanName" => "Alarm", "killDate" => "02/01/2020", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
+                        ["name" => "5.19Emp", "cleanName" => "Emp", "killDate" => "29/12/2019", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
+                        ["name" => "5.19Caravan", "cleanName" => "Caravan", "killDate" => "27/12/2019", "rank" => "Chief", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
+                        ["name" => "5.19Room", "cleanName" => "Room", "killDate" => "26/12/2019", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
+                        ["name" => "5.3Lm", "cleanName" => "Lm", "killDate" => "01/01/1970", "rank" => "Empty-suit", "gender" => 1, "version" => 5.3, "isHallOfFame" => false],
+                        ["name" => "5.43Room", "cleanName" => "Room", "killDate" => "01/01/1970", "rank" => "Pickpocket", "gender" => 1, "version" => 5.43, "isHallOfFame" => false]
+                    ];
+
+                    // Organize the response structure
+                    $responseData = [
+                        "settings" => [],
+                        "dead" => $deceasedCharacters,
+                        "messages" => []
+                    ];
+
+                    // Return the response in JSON format
+                    return response()->json($responseData)->send();
+
+
 
                     break;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 case 'Account' and $action === "AliveUserEndpoint" ;
-                    //todo
-
-                    /*
-                    {"bLoading":false,"bNewUser":true,"aPreviews":[]}
 
 
-                    */
+                    $data = [
+                        "bLoading" => false,
+                        "bNewUser" => true,
+                    ];
 
-                    $msg = "na na !";
-                    $code = 10;
-                    //return RenderController::Render($request, $msg, $code);
-
-
-
-                /*
-                 * this returns proper json very good
-                 */
-
-                $data = array();
-                $data['bLoading'] = false;
-                $data['bNewUser'] = true;
-                 return   response()->json($data)->send();
-
-                    die();
+                return   response()->json($data)->send();
 
 
                     break;
-
 
 
 
                 case 'Homepage.Reset' and $action ==="hof" ;
-                    //todo
+
+
+
+                    $data = [
+                        "hof" => [
+                        ],
+                        "release_date" => "2025-03-04 12:00:00",
+                        "extension" => "com.pt",
+                        "stats" => [
+                            "total" => 305,
+                            "alive" => 233,
+                            "dead" => 72,
+                            "online" => 1
+                        ],
+                        "title" => "PARABÉNS <br/>AOS VENCEDORES!",
+                        "subtitle" => "do último round"
+                    ];
+                    return   response()->json($data)->send();
 
                     exit();
 
                     break;
-
 
                 default:
                     return $this->Login($request, 'This module dont existes! ', 200);
@@ -201,7 +257,6 @@ class ModulesController extends Controller
 
         }
     }
-
 
 
 
@@ -307,6 +362,7 @@ class ModulesController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -341,6 +397,7 @@ class ModulesController extends Controller
     public function update(Request $request, $id)
     {
         //
+
     }
 
     /**

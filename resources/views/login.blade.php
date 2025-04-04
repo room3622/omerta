@@ -1,3 +1,6 @@
+@php
+    $version =   \App\Http\Controllers\GameVersionControler::GameVersion()
+@endphp
 <!doctype html>
 <html lang="en">
 <head>
@@ -32,12 +35,11 @@
     <!--<![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-    <!-- Omerta -->
-    <link href="{{ asset('/assets/5.7.3.0/homepage.css' )}}" rel="stylesheet"/>
-    <script src="{{asset('/assets/5.7.3.0/homepage.js') }}" type="text/javascript"></script>
+    <!-- Omerta  -->
+    <link href="{{ asset("/assets/{$version}/homepage.css") }}" rel="stylesheet"/>
+    <script src="{{ asset("/assets/{$version}/homepage.js") }}" type="text/javascript"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -88,7 +90,7 @@
                                         <div class="row">
                                             <div class="col-lg-3 text-center">
                                                 <img class="img-fluid m-1"
-                                                     src="https://static.barafranca.com/omerta_placeholder.png"
+                                                     src="{{  asset( "/omerta_placeholder.png" ) }}"
                                                      alt="">
                                             </div>
                                             <div class="col-lg-9 text-lg-start text-center pt-lg-1">
@@ -1796,7 +1798,7 @@
                                         <div class="row">
                                             <div class="col-lg-3 text-center">
                                                 <img class="img-fluid m-1"
-                                                     src="https://static.barafranca.com/omerta_placeholder.png"
+                                                     src="{{  asset( "/omerta_placeholder.png" ) }}"
                                                      alt="">
                                             </div>
                                             <div class="col-lg-9 text-lg-start text-center pt-lg-1">
@@ -2367,7 +2369,7 @@
                                         <div class="row">
                                             <div class="col-lg-3 text-center">
                                                 <img class="img-fluid m-1"
-                                                     src="https://static.barafranca.com/omerta_placeholder.png"
+                                                     src="{{  asset( "/omerta_placeholder.png" ) }}"
                                                      alt="">
                                             </div>
                                             <div class="col-lg-9 text-lg-start text-center pt-lg-1">
@@ -3037,19 +3039,19 @@
 <div id="game-disclaimer-wrapper" data-title="Disclaimer">
     <div class="gameDisclaimer">
 
-        <p>Please read this disclaimer carefully before signing up to play Omerta. </p>
+        <p>Please read this disclaimer carefully before signing up to play {{ config('app.name') }}. </p>
 
         <p>By registering an account, you are agreeing to be bound by the terms of this document. If you don not agree
-            to the terms of this document, do not register or log in to Omerta. </p>
+            to the terms of this document, do not register or log in to {{ config('app.name') }}. </p>
 
 
         <h2>Rights:</h2>
         <ul>
-            <li>You may play Omerta for fun.</li>
-            <li>You may play Omerta for free.</li>
-            <li>You may tell anyone about Omerta.</li>
-            <li>You may play Omerta on any computer to which you have access.</li>
-            <li>You may post links or refer to Omerta on other internet sites or via other media of your own choosing.
+            <li>You may play {{ config('app.name') }} for fun.</li>
+            <li>You may play {{ config('app.name') }} for free.</li>
+            <li>You may tell anyone about {{ config('app.name') }}.</li>
+            <li>You may play {{ config('app.name') }} on any computer to which you have access.</li>
+            <li>You may post links or refer to {{ config('app.name') }} on other internet sites or via other media of your own choosing.
             </li>
         </ul>
 
@@ -3059,27 +3061,27 @@
         <ol>
             <li>Register more than one active account per person.</li>
             <li>Exploit any bugs in the game code or the structure of the game for the furtherment of you character in
-                Omerta.
+                {{ config('app.name') }}.
             </li>
-            <li>Hack or attempt to hack or otherwise interfere with the server(s) on which Omerta is running .</li>
+            <li>Hack or attempt to hack or otherwise interfere with the server(s) on which {{ config('app.name') }} is running .</li>
             <li>Use any tools, bots, spiders or similar software based devices which automatically or semi-automatically
-                engage in gameplay in Omerta.
+                engage in gameplay in {{ config('app.name') }}.
             </li>
-            <li>Engage in discriminate of any kind against other players or personnel of Omerta or engage in threatening
+            <li>Engage in discriminate of any kind against other players or personnel of {{ config('app.name') }} or engage in threatening
                 behaviour outside of what would be deemed acceptable gameplay.
             </li>
         </ol>
 
         <h2>Additionally:</h2>
         <ol>
-            <li>The source code of Omerta is the copyrighted property of Omerta Game Limited.</li>
-            <li>The Software is licensed and not given to you, and Omerta Game LTD owns all copyright, trade secrets,
-                patents and all other proprietary rights in the Software and in the Omerta game concept.
+            <li>The source code of {{ config('app.name') }} is the copyrighted property of {{ config('app.name') }} Game Limited.</li>
+            <li>The Software is licensed and not given to you, and {{ config('app.name') }} Game LTD owns all copyright, trade secrets,
+                patents and all other proprietary rights in the Software and in the {{ config('app.name') }} game concept.
             </li>
-            <li>You expressly acknowledge and agree that registering at Omerta and playing Omerta is at your sole
+            <li>You expressly acknowledge and agree that registering at {{ config('app.name') }} and playing {{ config('app.name') }} is at your sole
                 risk.
             </li>
-            <li>Omerta and any related documentation or materials are provided 'As seen' and without internal or
+            <li>{{ config('app.name') }} and any related documentation or materials are provided 'As seen' and without internal or
                 external warranty of any kind.
             </li>
             <li>Appointed in game crewmembers may delete, inactivate or downgrade your account without recourse to
@@ -3090,9 +3092,9 @@
         <h2>PURCHASES OF DIGITAL GOODS:</h2>
         <ol>
             <li>Any purchase of digital goods, including but not limited to in-game Credits are non-refundable donations
-                to Omerta Publishing Ltd.
+                to {{ config('app.name') }} Publishing Ltd.
             </li>
-            <li>All purchases are considered donations and Omerta Publishing Ltd has no obligation to offer anything in
+            <li>All purchases are considered donations and {{ config('app.name') }} Publishing Ltd has no obligation to offer anything in
                 exchange for purchases made.
             </li>
         </ol>
@@ -3174,7 +3176,7 @@
     <div class="modal-dialog modal-fullscreen-sm-down modal-lg">
         <div class="modal-content register-container">
             <form action="?nojs=1&act=login" method="post" data-bind="submit: checkLogin" id="loginbox">
-                <p class="text-header px-4">Welcome to Omerta. The Godfather of Mafia games</p>
+                <p class="text-header px-4">Welcome to {{ config('app.name') }}. The Godfather of Mafia games</p>
 
                 <div class="row justify-content-center p-3">
                     <div class="col-11 col-lg-5 mb-3">
@@ -3227,7 +3229,7 @@
     <div class="modal-dialog modal-fullscreen-sm-down modal-lg">
         <div class="modal-content register-container">
             <form id="register-form" data-bind="submit: doRegister" action="#" method="POST">
-                <p class="text-header px-4">Your new life as Omerta Gangster starts here</p>
+                <p class="text-header px-4">Your new life as {{ config('app.name') }} Gangster starts here</p>
 
                 <div class="row justify-content-center">
                     <div class="col-11 col-lg-5 mb-3">
@@ -3352,7 +3354,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Omerta",
+            "name": "{{ config('app.name') }}",
             "alternateName": "{{ config('app.name') }}",
             "url": "{{ config('app.name') }}.uk",
             "sameAs": "https://www.facebook.com/Omerta3/"
@@ -3361,9 +3363,7 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 </body>
 </html>

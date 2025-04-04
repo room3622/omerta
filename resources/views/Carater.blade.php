@@ -1,7 +1,12 @@
+@php
+    $version =   \App\Http\Controllers\GameVersionControler::GameVersion()
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>My Account</title>
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic" type="text/css"/>
@@ -17,16 +22,12 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-
-
-
-    <link href="{{  asset('/assets/5.7.3.0/account.css') }}" rel="stylesheet"/>
-    <script src="{{  asset('/assets/5.7.3.0/account.js') }}" type="text/javascript"></script>
-
+    <link href="{{ asset("/assets/{$version}/account.css") }}" rel="stylesheet"/>
+    <script src="{{ asset("/assets/{$version}/account.js") }}" type="text/javascript"></script>
 
 </head>
 <body>
+
 
 <div class="milestone-wrapper wrapper" id="wrapper">
 
@@ -94,6 +95,7 @@
                     <tr>
                         <td>
                             <input type="text" placeholder="Ingame" style="text-transform: capitalize;" data-bind="uniqueName: true, value: name, attr: {disabled: !bNewUser}" maxlength="12" autofocus>
+
                         </td>
                         <td>
                             <div class="gender-select" data-bind="css: {selectable: bNewUser}">
@@ -104,6 +106,7 @@
                     </tr>
                 </table>
             </div>
+
         </script>    </div>
     <div class="clearfix"></div>
     <div class="pull-right action-container" data-bind="with: omerta.loaded.character">

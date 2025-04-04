@@ -19,7 +19,9 @@ use App\Http\Controllers\MailGunController;
 |
 */
 
+
 Route::resource('/', AccountController::class);
+
 
 
 

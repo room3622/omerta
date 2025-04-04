@@ -21,9 +21,10 @@ class AccountController extends Controller
     {
 
 
-        
+
         app(ModulesController::class)->Modules($request);
       return  app(ModulesController::class)->Start($request);
+
 
 
     }
@@ -49,6 +50,7 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
+
 
         /*
          * URL Modules post only
