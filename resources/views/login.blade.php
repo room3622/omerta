@@ -1,7 +1,7 @@
 @php
-    $version =   \App\Http\Controllers\GameVersionControler::GameVersion()
+    $version =   \App\Http\Controllers\GameControler::GameVersion()
 @endphp
-<!doctype html>
+        <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -23,7 +23,8 @@
     <link rel="canonical" href={{ config('app.url') }}"/>
 
     <!-- Needed fonts -->
-    <link rel=" stylesheet" href="//fonts.googleapis.com/css?family=Arimo:400,700" type="text/css"/">
+    <link rel=" stylesheet
+    " href="//fonts.googleapis.com/css?family=Arimo:400,700" type="text/css"/">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- VENDOR CORE -->
 
@@ -35,7 +36,8 @@
     <!--<![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
 
     <!-- Omerta  -->
     <link href="{{ asset("/assets/{$version}/homepage.css") }}" rel="stylesheet"/>
@@ -165,1619 +167,1619 @@
                                              style="max-height: 200px; overflow: hidden; overflow-y: scroll; position: relative;">
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#1</span> Akillsam
+                                        class="ranking ranking20">#1</span> Akillsam
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#2</span> Monster
+                                        class="ranking ranking20">#2</span> Monster
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#2</span> Volume
+                                        class="ranking ranking20">#2</span> Volume
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#2</span> Sixtynine
+                                        class="ranking ranking20">#2</span> Sixtynine
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#2</span> Strikex
+                                        class="ranking ranking20">#2</span> Strikex
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#3</span> Partybubbles
+                                        class="ranking ranking20">#3</span> Partybubbles
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#4</span> Enco
+                                        class="ranking ranking20">#4</span> Enco
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#4</span> Hazard
+                                        class="ranking ranking20">#4</span> Hazard
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Alesso
+                                        class="ranking ranking20">#5</span> Alesso
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Foxtrot
+                                        class="ranking ranking20">#5</span> Foxtrot
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Kolchek
+                                        class="ranking ranking20">#5</span> Kolchek
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Fallguys
+                                        class="ranking ranking20">#5</span> Fallguys
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Dictator
+                                        class="ranking ranking20">#5</span> Dictator
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#6</span> Bunk
+                                        class="ranking ranking20">#6</span> Bunk
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#6</span> Kenno
+                                        class="ranking ranking20">#6</span> Kenno
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#6</span> Madoooo
+                                        class="ranking ranking20">#6</span> Madoooo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#7</span> Wolfgang
+                                        class="ranking ranking20">#7</span> Wolfgang
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#7</span> Cata
+                                        class="ranking ranking20">#7</span> Cata
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Done
+                                        class="ranking ranking20">#8</span> Done
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Pretty
+                                        class="ranking ranking20">#8</span> Pretty
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Fosgasse
+                                        class="ranking ranking20">#8</span> Fosgasse
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Dan
+                                        class="ranking ranking20">#8</span> Dan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Sowrd
+                                        class="ranking ranking20">#8</span> Sowrd
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Ninchen
+                                        class="ranking ranking20">#9</span> Ninchen
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Killforyou
+                                        class="ranking ranking20">#9</span> Killforyou
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Gruppo
+                                        class="ranking ranking20">#9</span> Gruppo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Alcatraz
+                                        class="ranking ranking20">#9</span> Alcatraz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Dan
+                                        class="ranking ranking20">#10</span> Dan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Subutai
+                                        class="ranking ranking20">#10</span> Subutai
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Mystery
+                                        class="ranking ranking20">#10</span> Mystery
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Wabakimi
+                                        class="ranking ranking20">#10</span> Wabakimi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#11</span> Glory
+                                        class="ranking ranking20">#11</span> Glory
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#11</span> Jason
+                                        class="ranking ranking20">#11</span> Jason
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#11</span> Maynard
+                                        class="ranking ranking20">#11</span> Maynard
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#11</span> Xoxon
+                                        class="ranking ranking20">#11</span> Xoxon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#12</span> Perdition
+                                        class="ranking ranking20">#12</span> Perdition
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#12</span> Tyler
+                                        class="ranking ranking20">#12</span> Tyler
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#12</span> Picon
+                                        class="ranking ranking20">#12</span> Picon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#12</span> Polycom
+                                        class="ranking ranking20">#12</span> Polycom
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Saiyan
+                                        class="ranking ranking20">#13</span> Saiyan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Archilles
+                                        class="ranking ranking20">#13</span> Archilles
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Rancore
+                                        class="ranking ranking20">#13</span> Rancore
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Kai
+                                        class="ranking ranking20">#13</span> Kai
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Valgina
+                                        class="ranking ranking20">#13</span> Valgina
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#14</span> Conor
+                                        class="ranking ranking20">#14</span> Conor
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#14</span> Pollos
+                                        class="ranking ranking20">#14</span> Pollos
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#14</span> Grgapitic
+                                        class="ranking ranking20">#14</span> Grgapitic
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Damned
+                                        class="ranking ranking20">#15</span> Damned
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Asus
+                                        class="ranking ranking20">#15</span> Asus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Vegas
+                                        class="ranking ranking20">#15</span> Vegas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Mackie
+                                        class="ranking ranking20">#15</span> Mackie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#16</span> Buffon
+                                        class="ranking ranking20">#16</span> Buffon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#16</span> Agroki
+                                        class="ranking ranking20">#16</span> Agroki
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#16</span> Partigiano
+                                        class="ranking ranking20">#16</span> Partigiano
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#16</span> Mulan
+                                        class="ranking ranking20">#16</span> Mulan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#17</span> Bbb
+                                        class="ranking ranking20">#17</span> Bbb
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#17</span> Willie
+                                        class="ranking ranking20">#17</span> Willie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#17</span> Mangaboy
+                                        class="ranking ranking20">#17</span> Mangaboy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#17</span> Peme
+                                        class="ranking ranking20">#17</span> Peme
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#18</span> Dipzor
+                                        class="ranking ranking20">#18</span> Dipzor
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#18</span> Hector
+                                        class="ranking ranking20">#18</span> Hector
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#18</span> Lost
+                                        class="ranking ranking20">#18</span> Lost
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Suh
+                                        class="ranking ranking20">#19</span> Suh
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Tok
+                                        class="ranking ranking20">#19</span> Tok
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Oxidada
+                                        class="ranking ranking20">#19</span> Oxidada
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Grand
+                                        class="ranking ranking20">#19</span> Grand
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Ultra
+                                        class="ranking ranking20">#19</span> Ultra
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#20</span> Virgil
+                                        class="ranking ranking20">#20</span> Virgil
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#20</span> Auguste
+                                        class="ranking ranking20">#20</span> Auguste
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#20</span> Wonder
+                                        class="ranking ranking20">#20</span> Wonder
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Riot
+                                        class="ranking ranking50">#21</span> Riot
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Sensistar
+                                        class="ranking ranking50">#21</span> Sensistar
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Dark
+                                        class="ranking ranking50">#21</span> Dark
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Nrg
+                                        class="ranking ranking50">#21</span> Nrg
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Hoax
+                                        class="ranking ranking50">#21</span> Hoax
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#22</span> Sidorov
+                                        class="ranking ranking50">#22</span> Sidorov
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#22</span> Dunno
+                                        class="ranking ranking50">#22</span> Dunno
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#23</span> Dexo
+                                        class="ranking ranking50">#23</span> Dexo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#23</span> Cata
+                                        class="ranking ranking50">#23</span> Cata
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#23</span> Onlyfans
+                                        class="ranking ranking50">#23</span> Onlyfans
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Bazinga
+                                        class="ranking ranking50">#24</span> Bazinga
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Catanachio
+                                        class="ranking ranking50">#24</span> Catanachio
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Condition
+                                        class="ranking ranking50">#24</span> Condition
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Carus
+                                        class="ranking ranking50">#24</span> Carus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#25</span> Gusto
+                                        class="ranking ranking50">#25</span> Gusto
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#25</span> Amarant
+                                        class="ranking ranking50">#25</span> Amarant
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#25</span> Hyperion
+                                        class="ranking ranking50">#25</span> Hyperion
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Garotopodre
+                                        class="ranking ranking50">#26</span> Garotopodre
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Sense
+                                        class="ranking ranking50">#26</span> Sense
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Parcival
+                                        class="ranking ranking50">#26</span> Parcival
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Deranged
+                                        class="ranking ranking50">#26</span> Deranged
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Tomynuckles
+                                        class="ranking ranking50">#26</span> Tomynuckles
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Treater
+                                        class="ranking ranking50">#27</span> Treater
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Ashin
+                                        class="ranking ranking50">#27</span> Ashin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Bachelorete
+                                        class="ranking ranking50">#27</span> Bachelorete
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Captain
+                                        class="ranking ranking50">#27</span> Captain
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Kalliente
+                                        class="ranking ranking50">#27</span> Kalliente
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Packman
+                                        class="ranking ranking50">#28</span> Packman
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Nomer
+                                        class="ranking ranking50">#28</span> Nomer
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Anen
+                                        class="ranking ranking50">#28</span> Anen
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Kramer
+                                        class="ranking ranking50">#28</span> Kramer
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#29</span> Brody
+                                        class="ranking ranking50">#29</span> Brody
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#29</span> Roller
+                                        class="ranking ranking50">#29</span> Roller
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#29</span> Sychev
+                                        class="ranking ranking50">#29</span> Sychev
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#29</span> Goa
+                                        class="ranking ranking50">#29</span> Goa
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#30</span> Blanche
+                                        class="ranking ranking50">#30</span> Blanche
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#30</span> Iq
+                                        class="ranking ranking50">#30</span> Iq
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#30</span> Leftyrugiero
+                                        class="ranking ranking50">#30</span> Leftyrugiero
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#30</span> Karabudak
+                                        class="ranking ranking50">#30</span> Karabudak
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#30</span> Jade
+                                        class="ranking ranking50">#30</span> Jade
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#31</span> Mrlambo
+                                        class="ranking ranking50">#31</span> Mrlambo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#31</span> Tortellino
+                                        class="ranking ranking50">#31</span> Tortellino
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#31</span> Elmariachi
+                                        class="ranking ranking50">#31</span> Elmariachi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#31</span> Ahile
+                                        class="ranking ranking50">#31</span> Ahile
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Items
+                                        class="ranking ranking50">#32</span> Items
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Taz
+                                        class="ranking ranking50">#32</span> Taz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Joxan
+                                        class="ranking ranking50">#32</span> Joxan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Bachelorete
+                                        class="ranking ranking50">#32</span> Bachelorete
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Eklutna
+                                        class="ranking ranking50">#32</span> Eklutna
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#33</span> Zekt
+                                        class="ranking ranking50">#33</span> Zekt
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#33</span> Marvin
+                                        class="ranking ranking50">#33</span> Marvin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> So
+                                        class="ranking ranking50">#34</span> So
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> Vlinderin
+                                        class="ranking ranking50">#34</span> Vlinderin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> Lordvidar
+                                        class="ranking ranking50">#34</span> Lordvidar
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> Avozinho
+                                        class="ranking ranking50">#34</span> Avozinho
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> Tirtil
+                                        class="ranking ranking50">#34</span> Tirtil
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Silvertaker
+                                        class="ranking ranking50">#35</span> Silvertaker
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Yazz
+                                        class="ranking ranking50">#35</span> Yazz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Persempre
+                                        class="ranking ranking50">#35</span> Persempre
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Masha
+                                        class="ranking ranking50">#35</span> Masha
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Janzen
+                                        class="ranking ranking50">#35</span> Janzen
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Ash
+                                        class="ranking ranking50">#36</span> Ash
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Mar
+                                        class="ranking ranking50">#36</span> Mar
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Flack
+                                        class="ranking ranking50">#36</span> Flack
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Thera
+                                        class="ranking ranking50">#36</span> Thera
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#37</span> Bill
+                                        class="ranking ranking50">#37</span> Bill
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#37</span> Brix
+                                        class="ranking ranking50">#37</span> Brix
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#37</span> Uurluyum
+                                        class="ranking ranking50">#37</span> Uurluyum
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Jaymz
+                                        class="ranking ranking50">#38</span> Jaymz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Malignia
+                                        class="ranking ranking50">#38</span> Malignia
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Eklutna
+                                        class="ranking ranking50">#38</span> Eklutna
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Avataro
+                                        class="ranking ranking50">#38</span> Avataro
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#39</span> Saxotorjollo
+                                        class="ranking ranking50">#39</span> Saxotorjollo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#39</span> Valerie
+                                        class="ranking ranking50">#39</span> Valerie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#40</span> Tomynuckles
+                                        class="ranking ranking50">#40</span> Tomynuckles
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#40</span> Aloim
+                                        class="ranking ranking50">#40</span> Aloim
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#40</span> Wicked
+                                        class="ranking ranking50">#40</span> Wicked
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Elmariachi
+                                        class="ranking ranking50">#41</span> Elmariachi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Naisha
+                                        class="ranking ranking50">#41</span> Naisha
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Alena
+                                        class="ranking ranking50">#41</span> Alena
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Bluebell
+                                        class="ranking ranking50">#41</span> Bluebell
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#42</span> Hush
+                                        class="ranking ranking50">#42</span> Hush
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#42</span> Koeshi
+                                        class="ranking ranking50">#42</span> Koeshi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#42</span> Magnolia
+                                        class="ranking ranking50">#42</span> Magnolia
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#42</span> Innovator
+                                        class="ranking ranking50">#42</span> Innovator
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#43</span> Aldoru
+                                        class="ranking ranking50">#43</span> Aldoru
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#43</span> Motesy
+                                        class="ranking ranking50">#43</span> Motesy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Treater
+                                        class="ranking ranking50">#44</span> Treater
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Vlinderin
+                                        class="ranking ranking50">#44</span> Vlinderin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Pornhub
+                                        class="ranking ranking50">#44</span> Pornhub
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Suh
+                                        class="ranking ranking50">#44</span> Suh
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#45</span> Fatmike
+                                        class="ranking ranking50">#45</span> Fatmike
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#45</span> Deathzone
+                                        class="ranking ranking50">#45</span> Deathzone
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#45</span> Bigbastard
+                                        class="ranking ranking50">#45</span> Bigbastard
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#46</span> Sxollo
+                                        class="ranking ranking50">#46</span> Sxollo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#46</span> Mwarfare
+                                        class="ranking ranking50">#46</span> Mwarfare
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#46</span> Knowme
+                                        class="ranking ranking50">#46</span> Knowme
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#47</span> Drax
+                                        class="ranking ranking50">#47</span> Drax
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#47</span> Dub
+                                        class="ranking ranking50">#47</span> Dub
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#47</span> Fatmike
+                                        class="ranking ranking50">#47</span> Fatmike
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#48</span> Flack
+                                        class="ranking ranking50">#48</span> Flack
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#48</span> Flatout
+                                        class="ranking ranking50">#48</span> Flatout
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#49</span> Provenio
+                                        class="ranking ranking50">#49</span> Provenio
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#49</span> Jebs
+                                        class="ranking ranking50">#49</span> Jebs
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#49</span> Romanian
+                                        class="ranking ranking50">#49</span> Romanian
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#50</span> Mapleleaf
+                                        class="ranking ranking50">#50</span> Mapleleaf
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#50</span> Kaperka
+                                        class="ranking ranking50">#50</span> Kaperka
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#50</span> Qantaqa
+                                        class="ranking ranking50">#50</span> Qantaqa
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#50</span> Felicia
+                                        class="ranking ranking50">#50</span> Felicia
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#50</span> Manchyka
+                                        class="ranking ranking50">#50</span> Manchyka
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#51</span> Natsumi
+                                        class="ranking ranking100">#51</span> Natsumi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#51</span> Weiss
+                                        class="ranking ranking100">#51</span> Weiss
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#51</span> Yuran
+                                        class="ranking ranking100">#51</span> Yuran
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#51</span> Zero
+                                        class="ranking ranking100">#51</span> Zero
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#52</span> Ghost
+                                        class="ranking ranking100">#52</span> Ghost
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#52</span> Charlotte
+                                        class="ranking ranking100">#52</span> Charlotte
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#53</span> Devamke
+                                        class="ranking ranking100">#53</span> Devamke
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#53</span> Ayasli
+                                        class="ranking ranking100">#53</span> Ayasli
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#54</span> Zeka
+                                        class="ranking ranking100">#54</span> Zeka
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#54</span> Elmariachi
+                                        class="ranking ranking100">#54</span> Elmariachi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#55</span> Cassiopeia
+                                        class="ranking ranking100">#55</span> Cassiopeia
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#55</span> Dionisia
+                                        class="ranking ranking100">#55</span> Dionisia
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#55</span> Baz
+                                        class="ranking ranking100">#55</span> Baz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#55</span> Matrim
+                                        class="ranking ranking100">#55</span> Matrim
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#56</span> Magnolia
+                                        class="ranking ranking100">#56</span> Magnolia
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#56</span> Rockwell
+                                        class="ranking ranking100">#56</span> Rockwell
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#57</span> Zabid
+                                        class="ranking ranking100">#57</span> Zabid
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#57</span> Hemdorff
+                                        class="ranking ranking100">#57</span> Hemdorff
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#58</span> Django
+                                        class="ranking ranking100">#58</span> Django
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#58</span> Lenine
+                                        class="ranking ranking100">#58</span> Lenine
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Isengard
+                                        class="ranking ranking100">#59</span> Isengard
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Biggd
+                                        class="ranking ranking100">#59</span> Biggd
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Pandora
+                                        class="ranking ranking100">#59</span> Pandora
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Taz
+                                        class="ranking ranking100">#59</span> Taz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#60</span> Conor
+                                        class="ranking ranking100">#60</span> Conor
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#60</span> Impact
+                                        class="ranking ranking100">#60</span> Impact
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#61</span> Jackson
+                                        class="ranking ranking100">#61</span> Jackson
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#61</span> Onasibanak
+                                        class="ranking ranking100">#61</span> Onasibanak
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#62</span> Inyouranus
+                                        class="ranking ranking100">#62</span> Inyouranus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#62</span> Ariam
+                                        class="ranking ranking100">#62</span> Ariam
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#63</span> Libertan
+                                        class="ranking ranking100">#63</span> Libertan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#63</span> Rivella
+                                        class="ranking ranking100">#63</span> Rivella
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#63</span> Aaasdg
+                                        class="ranking ranking100">#63</span> Aaasdg
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#63</span> Espanhol
+                                        class="ranking ranking100">#63</span> Espanhol
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#64</span> Muratti
+                                        class="ranking ranking100">#64</span> Muratti
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#65</span> Snej
+                                        class="ranking ranking100">#65</span> Snej
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#65</span> Kaperka
+                                        class="ranking ranking100">#65</span> Kaperka
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#66</span> Deranged
+                                        class="ranking ranking100">#66</span> Deranged
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#66</span> Wezk
+                                        class="ranking ranking100">#66</span> Wezk
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#67</span> Fu
+                                        class="ranking ranking100">#67</span> Fu
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#67</span> Helena
+                                        class="ranking ranking100">#67</span> Helena
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#67</span> Slark
+                                        class="ranking ranking100">#67</span> Slark
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#68</span> Mate
+                                        class="ranking ranking100">#68</span> Mate
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#68</span> Www
+                                        class="ranking ranking100">#68</span> Www
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#68</span> Badcompany
+                                        class="ranking ranking100">#68</span> Badcompany
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#69</span> Deal
+                                        class="ranking ranking100">#69</span> Deal
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#69</span> Kinha
+                                        class="ranking ranking100">#69</span> Kinha
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#70</span> Stomex
+                                        class="ranking ranking100">#70</span> Stomex
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#70</span> Brutus
+                                        class="ranking ranking100">#70</span> Brutus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#70</span> Uzmcvs
+                                        class="ranking ranking100">#70</span> Uzmcvs
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#71</span> Paoli
+                                        class="ranking ranking100">#71</span> Paoli
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#71</span> Pretty
+                                        class="ranking ranking100">#71</span> Pretty
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#71</span> Hypnose
+                                        class="ranking ranking100">#71</span> Hypnose
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#72</span> Seagal
+                                        class="ranking ranking100">#72</span> Seagal
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#72</span> Nikees
+                                        class="ranking ranking100">#72</span> Nikees
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#73</span> Blue
+                                        class="ranking ranking100">#73</span> Blue
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#74</span> Dcman
+                                        class="ranking ranking100">#74</span> Dcman
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#74</span> Seventeen
+                                        class="ranking ranking100">#74</span> Seventeen
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#75</span> Dendroid
+                                        class="ranking ranking100">#75</span> Dendroid
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#76</span> Auguste
+                                        class="ranking ranking100">#76</span> Auguste
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#77</span> Rinzler
+                                        class="ranking ranking100">#77</span> Rinzler
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#77</span> Trish
+                                        class="ranking ranking100">#77</span> Trish
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#79</span> Jeice
+                                        class="ranking ranking100">#79</span> Jeice
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#80</span> Ikkea
+                                        class="ranking ranking100">#80</span> Ikkea
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#80</span> Marckie
+                                        class="ranking ranking100">#80</span> Marckie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#81</span> Penelope
+                                        class="ranking ranking100">#81</span> Penelope
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#81</span> Puds
+                                        class="ranking ranking100">#81</span> Puds
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#82</span> Dejavu
+                                        class="ranking ranking100">#82</span> Dejavu
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#82</span> Papi
+                                        class="ranking ranking100">#82</span> Papi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#83</span> Libertavurur
+                                        class="ranking ranking100">#83</span> Libertavurur
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#83</span> Enco
+                                        class="ranking ranking100">#83</span> Enco
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#84</span> Bridges
+                                        class="ranking ranking100">#84</span> Bridges
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#84</span> Gruttepier
+                                        class="ranking ranking100">#84</span> Gruttepier
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#86</span> Kung
+                                        class="ranking ranking100">#86</span> Kung
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#87</span> Blacksheep
+                                        class="ranking ranking100">#87</span> Blacksheep
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#87</span> Oblivions
+                                        class="ranking ranking100">#87</span> Oblivions
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#88</span> Reset
+                                        class="ranking ranking100">#88</span> Reset
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#89</span> Nova
+                                        class="ranking ranking100">#89</span> Nova
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#89</span> Axel
+                                        class="ranking ranking100">#89</span> Axel
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#89</span> Katie
+                                        class="ranking ranking100">#89</span> Katie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#90</span> Mollez
+                                        class="ranking ranking100">#90</span> Mollez
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#90</span> Waldo
+                                        class="ranking ranking100">#90</span> Waldo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#92</span> Diavolas
+                                        class="ranking ranking100">#92</span> Diavolas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#93</span> Fatale
+                                        class="ranking ranking100">#93</span> Fatale
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#94</span> Mucxx
+                                        class="ranking ranking100">#94</span> Mucxx
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#95</span> Therealwelle
+                                        class="ranking ranking100">#95</span> Therealwelle
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#95</span> Sinhooo
+                                        class="ranking ranking100">#95</span> Sinhooo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#96</span> Jade
+                                        class="ranking ranking100">#96</span> Jade
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#96</span> Defiant
+                                        class="ranking ranking100">#96</span> Defiant
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#97</span> Stier
+                                        class="ranking ranking100">#97</span> Stier
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#97</span> Tii
+                                        class="ranking ranking100">#97</span> Tii
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#98</span> Ysr
+                                        class="ranking ranking100">#98</span> Ysr
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#101</span> Nice
+                                        class="ranking ">#101</span> Nice
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#102</span> Papoose
+                                        class="ranking ">#102</span> Papoose
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#102</span> Gernas
+                                        class="ranking ">#102</span> Gernas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#103</span> Promo
+                                        class="ranking ">#103</span> Promo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#103</span> Bravo
+                                        class="ranking ">#103</span> Bravo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#104</span> Must
+                                        class="ranking ">#104</span> Must
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#104</span> Marla
+                                        class="ranking ">#104</span> Marla
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#105</span> Vintage
+                                        class="ranking ">#105</span> Vintage
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#105</span> Staley
+                                        class="ranking ">#105</span> Staley
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#108</span> Bad
+                                        class="ranking ">#108</span> Bad
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#110</span> Badalamenti
+                                        class="ranking ">#110</span> Badalamenti
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#111</span> Well
+                                        class="ranking ">#111</span> Well
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#111</span> Lsdreams
+                                        class="ranking ">#111</span> Lsdreams
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#113</span> Inyouranus
+                                        class="ranking ">#113</span> Inyouranus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#113</span> Yuhh
+                                        class="ranking ">#113</span> Yuhh
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#114</span> Letsev
+                                        class="ranking ">#114</span> Letsev
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#115</span> Christ
+                                        class="ranking ">#115</span> Christ
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#118</span> None
+                                        class="ranking ">#118</span> None
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#118</span> Piscis
+                                        class="ranking ">#118</span> Piscis
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#119</span> Muen
+                                        class="ranking ">#119</span> Muen
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#119</span> Makaroflu
+                                        class="ranking ">#119</span> Makaroflu
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#120</span> Missy
+                                        class="ranking ">#120</span> Missy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#121</span> Tonystark
+                                        class="ranking ">#121</span> Tonystark
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#121</span> Soek
+                                        class="ranking ">#121</span> Soek
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#123</span> Bluebell
+                                        class="ranking ">#123</span> Bluebell
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#124</span> Zagazaw
+                                        class="ranking ">#124</span> Zagazaw
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#124</span> Corruption
+                                        class="ranking ">#124</span> Corruption
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#125</span> Kas
+                                        class="ranking ">#125</span> Kas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#126</span> Yankee
+                                        class="ranking ">#126</span> Yankee
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#127</span> Pica
+                                        class="ranking ">#127</span> Pica
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#127</span> Sushi
+                                        class="ranking ">#127</span> Sushi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#128</span> Cat
+                                        class="ranking ">#128</span> Cat
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#129</span> Keeley
+                                        class="ranking ">#129</span> Keeley
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#130</span> Scarro
+                                        class="ranking ">#130</span> Scarro
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#130</span> Beethoven
+                                        class="ranking ">#130</span> Beethoven
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#132</span> Minds
+                                        class="ranking ">#132</span> Minds
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#133</span> Zina
+                                        class="ranking ">#133</span> Zina
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#134</span> Clown
+                                        class="ranking ">#134</span> Clown
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#135</span> Kraakhook
+                                        class="ranking ">#135</span> Kraakhook
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#137</span> Lila
+                                        class="ranking ">#137</span> Lila
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#138</span> Fury
+                                        class="ranking ">#138</span> Fury
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#139</span> Gammel
+                                        class="ranking ">#139</span> Gammel
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#140</span> Doppio
+                                        class="ranking ">#140</span> Doppio
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#141</span> Dembe
+                                        class="ranking ">#141</span> Dembe
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#142</span> Oehoe
+                                        class="ranking ">#142</span> Oehoe
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#143</span> Lampe
+                                        class="ranking ">#143</span> Lampe
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#147</span> Inci
+                                        class="ranking ">#147</span> Inci
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#148</span> Japp
+                                        class="ranking ">#148</span> Japp
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#148</span> Buzzz
+                                        class="ranking ">#148</span> Buzzz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#150</span> Liberta
+                                        class="ranking ">#150</span> Liberta
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#150</span> Puzo
+                                        class="ranking ">#150</span> Puzo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#153</span> Whoopsi
+                                        class="ranking ">#153</span> Whoopsi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#156</span> Bremmetje
+                                        class="ranking ">#156</span> Bremmetje
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#158</span> Doclapin
+                                        class="ranking ">#158</span> Doclapin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#159</span> Elchino
+                                        class="ranking ">#159</span> Elchino
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#159</span> Monkydw
+                                        class="ranking ">#159</span> Monkydw
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#160</span> Borg
+                                        class="ranking ">#160</span> Borg
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#161</span> Creator
+                                        class="ranking ">#161</span> Creator
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#167</span> Shifu
+                                        class="ranking ">#167</span> Shifu
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#168</span> Getalife
+                                        class="ranking ">#168</span> Getalife
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#169</span> Zerohero
+                                        class="ranking ">#169</span> Zerohero
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#170</span> Lecapeon
+                                        class="ranking ">#170</span> Lecapeon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#171</span> Surprise
+                                        class="ranking ">#171</span> Surprise
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#172</span> Caliber
+                                        class="ranking ">#172</span> Caliber
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#173</span> Vatoo
+                                        class="ranking ">#173</span> Vatoo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#174</span> Yettigayri
+                                        class="ranking ">#174</span> Yettigayri
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#174</span> Darkdog
+                                        class="ranking ">#174</span> Darkdog
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#176</span> Relentless
+                                        class="ranking ">#176</span> Relentless
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#179</span> Kybelle
+                                        class="ranking ">#179</span> Kybelle
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#180</span> Bulletride
+                                        class="ranking ">#180</span> Bulletride
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#182</span> Valachi
+                                        class="ranking ">#182</span> Valachi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#184</span> Vishnja
+                                        class="ranking ">#184</span> Vishnja
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#185</span> Must
+                                        class="ranking ">#185</span> Must
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#188</span> Norgah
+                                        class="ranking ">#188</span> Norgah
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#189</span> Av
+                                        class="ranking ">#189</span> Av
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#192</span> Karenlina
+                                        class="ranking ">#192</span> Karenlina
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#192</span> Ares
+                                        class="ranking ">#192</span> Ares
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#197</span> Revengeme
+                                        class="ranking ">#197</span> Revengeme
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#198</span> Sativa
+                                        class="ranking ">#198</span> Sativa
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#199</span> Light
+                                        class="ranking ">#199</span> Light
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#199</span> Luxzao
+                                        class="ranking ">#199</span> Luxzao
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#203</span> Kogelkopper
+                                        class="ranking ">#203</span> Kogelkopper
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#207</span> Ramcel
+                                        class="ranking ">#207</span> Ramcel
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#210</span> Zynp
+                                        class="ranking ">#210</span> Zynp
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#222</span> Fresia
+                                        class="ranking ">#222</span> Fresia
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#227</span> Lbrt
+                                        class="ranking ">#227</span> Lbrt
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#229</span> Sk
+                                        class="ranking ">#229</span> Sk
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#237</span> Scarro
+                                        class="ranking ">#237</span> Scarro
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#238</span> Vesta
+                                        class="ranking ">#238</span> Vesta
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#238</span> Zatty
+                                        class="ranking ">#238</span> Zatty
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#239</span> Bonbon
+                                        class="ranking ">#239</span> Bonbon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#240</span> Dsi
+                                        class="ranking ">#240</span> Dsi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#242</span> Sinekass
+                                        class="ranking ">#242</span> Sinekass
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#246</span> Rapunzel
+                                        class="ranking ">#246</span> Rapunzel
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#248</span> Seit
+                                        class="ranking ">#248</span> Seit
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#255</span> Flatbush
+                                        class="ranking ">#255</span> Flatbush
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#261</span> Crumblepie
+                                        class="ranking ">#261</span> Crumblepie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#262</span> Zeko
+                                        class="ranking ">#262</span> Zeko
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#269</span> Reward
+                                        class="ranking ">#269</span> Reward
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#284</span> Goro
+                                        class="ranking ">#284</span> Goro
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#293</span> Ihihi
+                                        class="ranking ">#293</span> Ihihi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#296</span> Mordes
+                                        class="ranking ">#296</span> Mordes
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#306</span> Lawd
+                                        class="ranking ">#306</span> Lawd
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#307</span> Crakots
+                                        class="ranking ">#307</span> Crakots
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#327</span> Shaun
+                                        class="ranking ">#327</span> Shaun
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#340</span> Nodjini
+                                        class="ranking ">#340</span> Nodjini
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#349</span> Cherry
+                                        class="ranking ">#349</span> Cherry
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#371</span> Trikopis
+                                        class="ranking ">#371</span> Trikopis
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#374</span> Summer
+                                        class="ranking ">#374</span> Summer
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#388</span> Blacksea
+                                        class="ranking ">#388</span> Blacksea
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#392</span> Galatasaray
+                                        class="ranking ">#392</span> Galatasaray
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#416</span> Despot
+                                        class="ranking ">#416</span> Despot
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#446</span> Blodvabel
+                                        class="ranking ">#446</span> Blodvabel
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#489</span> Rippieme
+                                        class="ranking ">#489</span> Rippieme
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#530</span> Hope
+                                        class="ranking ">#530</span> Hope
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#541</span> Huhu
+                                        class="ranking ">#541</span> Huhu
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#619</span> Jolly
+                                        class="ranking ">#619</span> Jolly
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#644</span> Elain
+                                        class="ranking ">#644</span> Elain
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#683</span> Dad
+                                        class="ranking ">#683</span> Dad
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#735</span> Mata
+                                        class="ranking ">#735</span> Mata
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#749</span> Zago
+                                        class="ranking ">#749</span> Zago
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#754</span> Cmx
+                                        class="ranking ">#754</span> Cmx
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#803</span> Bigheadtao
+                                        class="ranking ">#803</span> Bigheadtao
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#810</span> Bombonera
+                                        class="ranking ">#810</span> Bombonera
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#819</span> Xynra
+                                        class="ranking ">#819</span> Xynra
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1155</span> Supoentje
+                                        class="ranking ">#1155</span> Supoentje
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1507</span> Opa
+                                        class="ranking ">#1507</span> Opa
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1610</span> Lamark
+                                        class="ranking ">#1610</span> Lamark
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1686</span> Leopold
+                                        class="ranking ">#1686</span> Leopold
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1687</span> Ossify
+                                        class="ranking ">#1687</span> Ossify
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1688</span> Flaip
+                                        class="ranking ">#1688</span> Flaip
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1762</span> Lelijk
+                                        class="ranking ">#1762</span> Lelijk
                                             </div>
 
                                         </div>
@@ -1852,503 +1854,503 @@
                                              style="max-height: 200px; overflow: hidden; overflow-y: scroll; position: relative;">
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#1</span> Ripsam
+                                        class="ranking ranking20">#1</span> Ripsam
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#2</span> Rahu
+                                        class="ranking ranking20">#2</span> Rahu
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#3</span> Peppino
+                                        class="ranking ranking20">#3</span> Peppino
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#3</span> Ad
+                                        class="ranking ranking20">#3</span> Ad
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Arkadi
+                                        class="ranking ranking20">#5</span> Arkadi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Wayne
+                                        class="ranking ranking20">#5</span> Wayne
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#6</span> Pala
+                                        class="ranking ranking20">#6</span> Pala
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#7</span> Aristocrat
+                                        class="ranking ranking20">#7</span> Aristocrat
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#7</span> Wootf
+                                        class="ranking ranking20">#7</span> Wootf
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Sheperd
+                                        class="ranking ranking20">#8</span> Sheperd
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Sai
+                                        class="ranking ranking20">#9</span> Sai
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Pedrog
+                                        class="ranking ranking20">#9</span> Pedrog
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Envi
+                                        class="ranking ranking20">#10</span> Envi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Cefa
+                                        class="ranking ranking20">#10</span> Cefa
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#11</span> Clay
+                                        class="ranking ranking20">#11</span> Clay
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#12</span> Willie
+                                        class="ranking ranking20">#12</span> Willie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Euro
+                                        class="ranking ranking20">#13</span> Euro
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#14</span> Berserker
+                                        class="ranking ranking20">#14</span> Berserker
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Chiron
+                                        class="ranking ranking20">#15</span> Chiron
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Bonez
+                                        class="ranking ranking20">#15</span> Bonez
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#16</span> Bm
+                                        class="ranking ranking20">#16</span> Bm
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#17</span> Oxy
+                                        class="ranking ranking20">#17</span> Oxy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#17</span> Rebel
+                                        class="ranking ranking20">#17</span> Rebel
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#18</span> Thera
+                                        class="ranking ranking20">#18</span> Thera
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Kraakhaak
+                                        class="ranking ranking20">#19</span> Kraakhaak
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Prestij
+                                        class="ranking ranking20">#19</span> Prestij
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#20</span> Sabo
+                                        class="ranking ranking20">#20</span> Sabo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#20</span> Obelisk
+                                        class="ranking ranking20">#20</span> Obelisk
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Tasos
+                                        class="ranking ranking50">#21</span> Tasos
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Kekw
+                                        class="ranking ranking50">#21</span> Kekw
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#22</span> Hymie
+                                        class="ranking ranking50">#22</span> Hymie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#23</span> Ketenpere
+                                        class="ranking ranking50">#23</span> Ketenpere
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#23</span> Francdepazzi
+                                        class="ranking ranking50">#23</span> Francdepazzi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Calimero
+                                        class="ranking ranking50">#24</span> Calimero
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Thanos
+                                        class="ranking ranking50">#24</span> Thanos
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#25</span> Harold
+                                        class="ranking ranking50">#25</span> Harold
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#25</span> Jerry
+                                        class="ranking ranking50">#25</span> Jerry
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Bazarov
+                                        class="ranking ranking50">#26</span> Bazarov
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Hypnose
+                                        class="ranking ranking50">#27</span> Hypnose
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Aguilar
+                                        class="ranking ranking50">#27</span> Aguilar
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Klitschko
+                                        class="ranking ranking50">#28</span> Klitschko
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Kaiser
+                                        class="ranking ranking50">#28</span> Kaiser
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#29</span> Smoke
+                                        class="ranking ranking50">#29</span> Smoke
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#30</span> Bobs
+                                        class="ranking ranking50">#30</span> Bobs
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#31</span> Gulating
+                                        class="ranking ranking50">#31</span> Gulating
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Everse
+                                        class="ranking ranking50">#32</span> Everse
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Restavnatav
+                                        class="ranking ranking50">#32</span> Restavnatav
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#33</span> Bonez
+                                        class="ranking ranking50">#33</span> Bonez
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#33</span> Joseph
+                                        class="ranking ranking50">#33</span> Joseph
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> Vicarious
+                                        class="ranking ranking50">#34</span> Vicarious
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Francdepazzi
+                                        class="ranking ranking50">#35</span> Francdepazzi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Dolo
+                                        class="ranking ranking50">#36</span> Dolo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Jayce
+                                        class="ranking ranking50">#36</span> Jayce
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#37</span> Ti
+                                        class="ranking ranking50">#37</span> Ti
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Inara
+                                        class="ranking ranking50">#38</span> Inara
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Chappie
+                                        class="ranking ranking50">#38</span> Chappie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#39</span> Francesco
+                                        class="ranking ranking50">#39</span> Francesco
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#39</span> Ironcat
+                                        class="ranking ranking50">#39</span> Ironcat
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#40</span> Bobs
+                                        class="ranking ranking50">#40</span> Bobs
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#40</span> Coffee
+                                        class="ranking ranking50">#40</span> Coffee
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Hetfield
+                                        class="ranking ranking50">#41</span> Hetfield
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Asa
+                                        class="ranking ranking50">#41</span> Asa
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#42</span> Troja
+                                        class="ranking ranking50">#42</span> Troja
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#43</span> Toxico
+                                        class="ranking ranking50">#43</span> Toxico
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Cocain
+                                        class="ranking ranking50">#44</span> Cocain
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Cocain
+                                        class="ranking ranking50">#44</span> Cocain
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#45</span> Alemdar
+                                        class="ranking ranking50">#45</span> Alemdar
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#45</span> Atlas
+                                        class="ranking ranking50">#45</span> Atlas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#48</span> Jukinto
+                                        class="ranking ranking50">#48</span> Jukinto
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#48</span> Jiha
+                                        class="ranking ranking50">#48</span> Jiha
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#49</span> Dex
+                                        class="ranking ranking50">#49</span> Dex
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#49</span> Vaizzo
+                                        class="ranking ranking50">#49</span> Vaizzo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#50</span> Bas
+                                        class="ranking ranking50">#50</span> Bas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#51</span> Goat
+                                        class="ranking ranking100">#51</span> Goat
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#53</span> Captaincat
+                                        class="ranking ranking100">#53</span> Captaincat
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#53</span> Dex
+                                        class="ranking ranking100">#53</span> Dex
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#54</span> Hilly
+                                        class="ranking ranking100">#54</span> Hilly
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#55</span> Ing
+                                        class="ranking ranking100">#55</span> Ing
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#56</span> Vaizzo
+                                        class="ranking ranking100">#56</span> Vaizzo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#57</span> Gufy
+                                        class="ranking ranking100">#57</span> Gufy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#58</span> Mirto
+                                        class="ranking ranking100">#58</span> Mirto
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Dolo
+                                        class="ranking ranking100">#59</span> Dolo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Arthur
+                                        class="ranking ranking100">#59</span> Arthur
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#60</span> Melkor
+                                        class="ranking ranking100">#60</span> Melkor
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#61</span> Gnag
+                                        class="ranking ranking100">#61</span> Gnag
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#62</span> Chappie
+                                        class="ranking ranking100">#62</span> Chappie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#62</span> Pompom
+                                        class="ranking ranking100">#62</span> Pompom
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#63</span> Luxor
+                                        class="ranking ranking100">#63</span> Luxor
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#64</span> Urania
+                                        class="ranking ranking100">#64</span> Urania
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#65</span> Vincent
+                                        class="ranking ranking100">#65</span> Vincent
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#66</span> Tempest
+                                        class="ranking ranking100">#66</span> Tempest
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#68</span> Zebu
+                                        class="ranking ranking100">#68</span> Zebu
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#69</span> Katie
+                                        class="ranking ranking100">#69</span> Katie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#73</span> Creve
+                                        class="ranking ranking100">#73</span> Creve
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#74</span> Radom
+                                        class="ranking ranking100">#74</span> Radom
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#75</span> Mtz
+                                        class="ranking ranking100">#75</span> Mtz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#79</span> Djuru
+                                        class="ranking ranking100">#79</span> Djuru
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#82</span> Cigaro
+                                        class="ranking ranking100">#82</span> Cigaro
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#86</span> Onfire
+                                        class="ranking ranking100">#86</span> Onfire
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#92</span> Gandi
+                                        class="ranking ranking100">#92</span> Gandi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#92</span> Donatello
+                                        class="ranking ranking100">#92</span> Donatello
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#97</span> Bedir
+                                        class="ranking ranking100">#97</span> Bedir
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#102</span> Monking
+                                        class="ranking ">#102</span> Monking
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#107</span> Otuken
+                                        class="ranking ">#107</span> Otuken
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#110</span> Tortuga
+                                        class="ranking ">#110</span> Tortuga
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#111</span> Hanginthere
+                                        class="ranking ">#111</span> Hanginthere
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#112</span> Sfw
+                                        class="ranking ">#112</span> Sfw
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#118</span> Warmonger
+                                        class="ranking ">#118</span> Warmonger
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#123</span> Hus
+                                        class="ranking ">#123</span> Hus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#126</span> Cali
+                                        class="ranking ">#126</span> Cali
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#127</span> Calque
+                                        class="ranking ">#127</span> Calque
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#129</span> Barristan
+                                        class="ranking ">#129</span> Barristan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#131</span> Dent
+                                        class="ranking ">#131</span> Dent
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#141</span> Yildiray
+                                        class="ranking ">#141</span> Yildiray
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#143</span> Ulas
+                                        class="ranking ">#143</span> Ulas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#144</span> Ripsko
+                                        class="ranking ">#144</span> Ripsko
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#156</span> Ernesto
+                                        class="ranking ">#156</span> Ernesto
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#157</span> Ancalagon
+                                        class="ranking ">#157</span> Ancalagon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#198</span> Darth
+                                        class="ranking ">#198</span> Darth
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#247</span> Kazem
+                                        class="ranking ">#247</span> Kazem
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#391</span> Nobg
+                                        class="ranking ">#391</span> Nobg
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#562</span> Gooss
+                                        class="ranking ">#562</span> Gooss
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#585</span> Lelouch
+                                        class="ranking ">#585</span> Lelouch
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#733</span> Charlie
+                                        class="ranking ">#733</span> Charlie
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#760</span> Acapella
+                                        class="ranking ">#760</span> Acapella
                                             </div>
 
                                         </div>
@@ -2423,495 +2425,495 @@
                                              style="max-height: 200px; overflow: hidden; overflow-y: scroll; position: relative;">
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#2</span> Syntax
+                                        class="ranking ranking20">#2</span> Syntax
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Cartman
+                                        class="ranking ranking20">#5</span> Cartman
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#5</span> Ausbilder
+                                        class="ranking ranking20">#5</span> Ausbilder
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#6</span> Decoy
+                                        class="ranking ranking20">#6</span> Decoy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#6</span> Legendary
+                                        class="ranking ranking20">#6</span> Legendary
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#7</span> Licht
+                                        class="ranking ranking20">#7</span> Licht
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#7</span> Behzatc
+                                        class="ranking ranking20">#7</span> Behzatc
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Abraham
+                                        class="ranking ranking20">#8</span> Abraham
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#8</span> Steven
+                                        class="ranking ranking20">#8</span> Steven
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Aselim
+                                        class="ranking ranking20">#9</span> Aselim
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#9</span> Pala
+                                        class="ranking ranking20">#9</span> Pala
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Torogladio
+                                        class="ranking ranking20">#10</span> Torogladio
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#10</span> Amy
+                                        class="ranking ranking20">#10</span> Amy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#11</span> Zn
+                                        class="ranking ranking20">#11</span> Zn
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#11</span> Ruth
+                                        class="ranking ranking20">#11</span> Ruth
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#12</span> Walton
+                                        class="ranking ranking20">#12</span> Walton
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#12</span> Oflumeric
+                                        class="ranking ranking20">#12</span> Oflumeric
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Elardion
+                                        class="ranking ranking20">#13</span> Elardion
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#13</span> Wolverine
+                                        class="ranking ranking20">#13</span> Wolverine
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#14</span> Firestorm
+                                        class="ranking ranking20">#14</span> Firestorm
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#14</span> Bluey
+                                        class="ranking ranking20">#14</span> Bluey
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Xewn
+                                        class="ranking ranking20">#15</span> Xewn
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#15</span> Fophef
+                                        class="ranking ranking20">#15</span> Fophef
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#16</span> Zn
+                                        class="ranking ranking20">#16</span> Zn
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#17</span> Abbas
+                                        class="ranking ranking20">#17</span> Abbas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#18</span> Fade
+                                        class="ranking ranking20">#18</span> Fade
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#18</span> Batigol
+                                        class="ranking ranking20">#18</span> Batigol
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Bordomavi
+                                        class="ranking ranking20">#19</span> Bordomavi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#19</span> Bdback
+                                        class="ranking ranking20">#19</span> Bdback
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#20</span> Hcrobfr
+                                        class="ranking ranking20">#20</span> Hcrobfr
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking20">#20</span> Undomiel
+                                        class="ranking ranking20">#20</span> Undomiel
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Audhild
+                                        class="ranking ranking50">#21</span> Audhild
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#21</span> Saiyan
+                                        class="ranking ranking50">#21</span> Saiyan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#22</span> Gotcio
+                                        class="ranking ranking50">#22</span> Gotcio
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#23</span> Eilish
+                                        class="ranking ranking50">#23</span> Eilish
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#23</span> Zapkinus
+                                        class="ranking ranking50">#23</span> Zapkinus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Abrakadabra
+                                        class="ranking ranking50">#24</span> Abrakadabra
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#24</span> Shira
+                                        class="ranking ranking50">#24</span> Shira
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#25</span> Psyfi
+                                        class="ranking ranking50">#25</span> Psyfi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#25</span> Oniki
+                                        class="ranking ranking50">#25</span> Oniki
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Draak
+                                        class="ranking ranking50">#26</span> Draak
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#26</span> Army
+                                        class="ranking ranking50">#26</span> Army
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Dolores
+                                        class="ranking ranking50">#27</span> Dolores
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#27</span> Lo
+                                        class="ranking ranking50">#27</span> Lo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Tatanka
+                                        class="ranking ranking50">#28</span> Tatanka
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#28</span> Bc
+                                        class="ranking ranking50">#28</span> Bc
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#29</span> Tessa
+                                        class="ranking ranking50">#29</span> Tessa
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#29</span> Mete
+                                        class="ranking ranking50">#29</span> Mete
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#30</span> Hasan
+                                        class="ranking ranking50">#30</span> Hasan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#31</span> California
+                                        class="ranking ranking50">#31</span> California
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#31</span> Mandm
+                                        class="ranking ranking50">#31</span> Mandm
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#32</span> Dflow
+                                        class="ranking ranking50">#32</span> Dflow
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#33</span> Mandm
+                                        class="ranking ranking50">#33</span> Mandm
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#33</span> Ossify
+                                        class="ranking ranking50">#33</span> Ossify
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> Tranquilla
+                                        class="ranking ranking50">#34</span> Tranquilla
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#34</span> Reigen
+                                        class="ranking ranking50">#34</span> Reigen
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Severus
+                                        class="ranking ranking50">#35</span> Severus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#35</span> Rocco
+                                        class="ranking ranking50">#35</span> Rocco
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Trix
+                                        class="ranking ranking50">#36</span> Trix
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#36</span> Hc
+                                        class="ranking ranking50">#36</span> Hc
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#37</span> Rasputin
+                                        class="ranking ranking50">#37</span> Rasputin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Risus
+                                        class="ranking ranking50">#38</span> Risus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#38</span> Alaskali
+                                        class="ranking ranking50">#38</span> Alaskali
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#39</span> Ziyan
+                                        class="ranking ranking50">#39</span> Ziyan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#39</span> Caseres
+                                        class="ranking ranking50">#39</span> Caseres
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#40</span> Abi
+                                        class="ranking ranking50">#40</span> Abi
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Logan
+                                        class="ranking ranking50">#41</span> Logan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#41</span> Red
+                                        class="ranking ranking50">#41</span> Red
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#42</span> Zafer
+                                        class="ranking ranking50">#42</span> Zafer
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#42</span> Zindan
+                                        class="ranking ranking50">#42</span> Zindan
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#43</span> Caseres
+                                        class="ranking ranking50">#43</span> Caseres
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Savastano
+                                        class="ranking ranking50">#44</span> Savastano
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#44</span> Reis
+                                        class="ranking ranking50">#44</span> Reis
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#45</span> Cb
+                                        class="ranking ranking50">#45</span> Cb
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#46</span> Bold
+                                        class="ranking ranking50">#46</span> Bold
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#47</span> Reckless
+                                        class="ranking ranking50">#47</span> Reckless
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#48</span> Doz
+                                        class="ranking ranking50">#48</span> Doz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#49</span> Gunucci
+                                        class="ranking ranking50">#49</span> Gunucci
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking50">#50</span> Kharon
+                                        class="ranking ranking50">#50</span> Kharon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#53</span> Cordial
+                                        class="ranking ranking100">#53</span> Cordial
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#54</span> Portugal
+                                        class="ranking ranking100">#54</span> Portugal
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#56</span> Uncle
+                                        class="ranking ranking100">#56</span> Uncle
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#56</span> Sneaky
+                                        class="ranking ranking100">#56</span> Sneaky
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#57</span> Beast
+                                        class="ranking ranking100">#57</span> Beast
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#58</span> Capraz
+                                        class="ranking ranking100">#58</span> Capraz
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Zenere
+                                        class="ranking ranking100">#59</span> Zenere
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#59</span> Sado
+                                        class="ranking ranking100">#59</span> Sado
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#60</span> Ahey
+                                        class="ranking ranking100">#60</span> Ahey
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#62</span> Kharon
+                                        class="ranking ranking100">#62</span> Kharon
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#64</span> Lolo
+                                        class="ranking ranking100">#64</span> Lolo
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#67</span> Kenwayy
+                                        class="ranking ranking100">#67</span> Kenwayy
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#69</span> Wltn
+                                        class="ranking ranking100">#69</span> Wltn
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#80</span> Maho
+                                        class="ranking ranking100">#80</span> Maho
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#87</span> Agressor
+                                        class="ranking ranking100">#87</span> Agressor
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#90</span> Jarrri
+                                        class="ranking ranking100">#90</span> Jarrri
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#92</span> Mb
+                                        class="ranking ranking100">#92</span> Mb
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#94</span> Sivas
+                                        class="ranking ranking100">#94</span> Sivas
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#94</span> Ratratrat
+                                        class="ranking ranking100">#94</span> Ratratrat
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#96</span> Abuzittin
+                                        class="ranking ranking100">#96</span> Abuzittin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ranking100">#98</span> Bd
+                                        class="ranking ranking100">#98</span> Bd
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#109</span> Ola
+                                        class="ranking ">#109</span> Ola
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#110</span> Rai
+                                        class="ranking ">#110</span> Rai
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#123</span> Dast
+                                        class="ranking ">#123</span> Dast
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#132</span> Kanka
+                                        class="ranking ">#132</span> Kanka
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#144</span> Skywolf
+                                        class="ranking ">#144</span> Skywolf
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#148</span> Sure
+                                        class="ranking ">#148</span> Sure
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#152</span> Bouc
+                                        class="ranking ">#152</span> Bouc
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#181</span> Serolduamk
+                                        class="ranking ">#181</span> Serolduamk
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#183</span> Taklacikus
+                                        class="ranking ">#183</span> Taklacikus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#209</span> Rfv
+                                        class="ranking ">#209</span> Rfv
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#285</span> Beyazkabus
+                                        class="ranking ">#285</span> Beyazkabus
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#294</span> Castle
+                                        class="ranking ">#294</span> Castle
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#300</span> Sv
+                                        class="ranking ">#300</span> Sv
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#305</span> Incememedd
+                                        class="ranking ">#305</span> Incememedd
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#325</span> Thetk
+                                        class="ranking ">#325</span> Thetk
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#522</span> Poh
+                                        class="ranking ">#522</span> Poh
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#649</span> Xcxcxx
+                                        class="ranking ">#649</span> Xcxcxx
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#704</span> Zizuskr
+                                        class="ranking ">#704</span> Zizuskr
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#743</span> Linkin
+                                        class="ranking ">#743</span> Linkin
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#754</span> Karma
+                                        class="ranking ">#754</span> Karma
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#884</span> Azman
+                                        class="ranking ">#884</span> Azman
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#912</span> Noah
+                                        class="ranking ">#912</span> Noah
                                             </div>
                                             <div class="col text-start">
                                 <span
-                                    class="ranking ">#1243</span> Mustileaks
+                                        class="ranking ">#1243</span> Mustileaks
                                             </div>
 
                                         </div>
@@ -2933,7 +2935,7 @@
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
                                         <strong><span
-                                                style="display: inline-block; width: 15px; margin-right: 5px;">#4</span>
+                                                    style="display: inline-block; width: 15px; margin-right: 5px;">#4</span>
                                             Gondor
                                         </strong>
                                     </div>
@@ -2952,7 +2954,7 @@
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
                                         <strong><span
-                                                style="display: inline-block; width: 15px; margin-right: 5px;">#5</span>
+                                                    style="display: inline-block; width: 15px; margin-right: 5px;">#5</span>
                                             Batavia
                                         </strong>
                                     </div>
@@ -2969,7 +2971,7 @@
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
                                         <strong><span
-                                                style="display: inline-block; width: 15px; margin-right: 5px;">#6</span>
+                                                    style="display: inline-block; width: 15px; margin-right: 5px;">#6</span>
                                             Vengeance
                                         </strong>
                                     </div>
@@ -2988,7 +2990,7 @@
                                 <div class="family-rankings-table row text-start" style="text-transform: uppercase;">
                                     <div class="col-12 col-xl-2">
                                         <strong><span
-                                                style="display: inline-block; width: 15px; margin-right: 5px;">#7</span>
+                                                    style="display: inline-block; width: 15px; margin-right: 5px;">#7</span>
                                             Reichsthaler
                                         </strong>
                                     </div>
@@ -3030,7 +3032,7 @@
     </div>
     <footer class="mt-3 text-white-50">
         <span
-            class="color">&copy; 2004 - {{ date('Y') }} - {{ config('app.name') }} PUBLISHING LTD (Company Reg: )</span>
+                class="color">&copy; 2004 - {{ date('Y') }} - {{ config('app.name') }} PUBLISHING LTD (Company Reg: )</span>
     </footer>
 
 </div>
@@ -3051,7 +3053,8 @@
             <li>You may play {{ config('app.name') }} for free.</li>
             <li>You may tell anyone about {{ config('app.name') }}.</li>
             <li>You may play {{ config('app.name') }} on any computer to which you have access.</li>
-            <li>You may post links or refer to {{ config('app.name') }} on other internet sites or via other media of your own choosing.
+            <li>You may post links or refer to {{ config('app.name') }} on other internet sites or via other media of
+                your own choosing.
             </li>
         </ul>
 
@@ -3063,25 +3066,34 @@
             <li>Exploit any bugs in the game code or the structure of the game for the furtherment of you character in
                 {{ config('app.name') }}.
             </li>
-            <li>Hack or attempt to hack or otherwise interfere with the server(s) on which {{ config('app.name') }} is running .</li>
+            <li>Hack or attempt to hack or otherwise interfere with the server(s) on which {{ config('app.name') }} is
+                running .
+            </li>
             <li>Use any tools, bots, spiders or similar software based devices which automatically or semi-automatically
                 engage in gameplay in {{ config('app.name') }}.
             </li>
-            <li>Engage in discriminate of any kind against other players or personnel of {{ config('app.name') }} or engage in threatening
+            <li>Engage in discriminate of any kind against other players or personnel of {{ config('app.name') }} or
+                engage in threatening
                 behaviour outside of what would be deemed acceptable gameplay.
             </li>
         </ol>
 
         <h2>Additionally:</h2>
         <ol>
-            <li>The source code of {{ config('app.name') }} is the copyrighted property of {{ config('app.name') }} Game Limited.</li>
-            <li>The Software is licensed and not given to you, and {{ config('app.name') }} Game LTD owns all copyright, trade secrets,
-                patents and all other proprietary rights in the Software and in the {{ config('app.name') }} game concept.
+            <li>The source code of {{ config('app.name') }} is the copyrighted property of {{ config('app.name') }} Game
+                Limited.
             </li>
-            <li>You expressly acknowledge and agree that registering at {{ config('app.name') }} and playing {{ config('app.name') }} is at your sole
+            <li>The Software is licensed and not given to you, and {{ config('app.name') }} Game LTD owns all copyright,
+                trade secrets,
+                patents and all other proprietary rights in the Software and in the {{ config('app.name') }} game
+                concept.
+            </li>
+            <li>You expressly acknowledge and agree that registering at {{ config('app.name') }} and
+                playing {{ config('app.name') }} is at your sole
                 risk.
             </li>
-            <li>{{ config('app.name') }} and any related documentation or materials are provided 'As seen' and without internal or
+            <li>{{ config('app.name') }} and any related documentation or materials are provided 'As seen' and without
+                internal or
                 external warranty of any kind.
             </li>
             <li>Appointed in game crewmembers may delete, inactivate or downgrade your account without recourse to
@@ -3094,7 +3106,8 @@
             <li>Any purchase of digital goods, including but not limited to in-game Credits are non-refundable donations
                 to {{ config('app.name') }} Publishing Ltd.
             </li>
-            <li>All purchases are considered donations and {{ config('app.name') }} Publishing Ltd has no obligation to offer anything in
+            <li>All purchases are considered donations and {{ config('app.name') }} Publishing Ltd has no obligation to
+                offer anything in
                 exchange for purchases made.
             </li>
         </ol>
@@ -3251,7 +3264,7 @@
                                     <input id="input-disclaimer" name="agree" value="yes" type="checkbox"
                                            required="required"> I have read and agree to the
                                     <a href="javascript:openDisclaimer()"><b>Disclaimer</b></a> <span
-                                        class="reqfield">*</span>
+                                            class="reqfield">*</span>
                                 </label>
                             </div>
 
@@ -3349,12 +3362,11 @@
 </script>
 
 
-
 <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "{{ config('app.name') }}",
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ config('app.name') }}",
             "alternateName": "{{ config('app.name') }}",
             "url": "{{ config('app.name') }}.uk",
             "sameAs": "https://www.facebook.com/Omerta3/"
@@ -3363,7 +3375,8 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>

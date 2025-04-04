@@ -17,8 +17,7 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-    {
+    public function index(Request $request){
 
 
 
@@ -28,6 +27,63 @@ class AccountController extends Controller
 
 
     }
+
+
+
+
+
+
+
+
+    public static function AccountGameHistory()
+    {
+
+
+        /*
+              * todo Repair nedet ASP
+              */
+
+        $deceasedCharacters = [
+
+            ["name" => "5.3Lm", "cleanName" => "Lm", "killDate" => "01/01/1970", "rank" => "Empty-suit", "gender" => 1, "version" => 5.3, "isHallOfFame" => true],
+
+        ];
+
+        // Organize the response structure
+        $responseData = [
+            "settings" => [],
+            "dead" => $deceasedCharacters,
+            "messages" => []
+        ];
+
+        return $responseData;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.

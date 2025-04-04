@@ -1,7 +1,7 @@
 @php
-    $version =   \App\Http\Controllers\GameVersionControler::GameVersion()
+    $version =   \App\Http\Controllers\GameControler::GameVersion()
 @endphp
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -31,7 +31,8 @@
 
 <div class="milestone-wrapper wrapper" id="wrapper">
 
-    <img src="/assets/omerta/main/account/assets/img/create-the-next-don.png" class="milestone-wrapper-title-slogan" alt="">
+    <img src="/assets/omerta/main/account/assets/img/create-the-next-don.png" class="milestone-wrapper-title-slogan"
+         alt="">
     <h2 class="milestone-wrapper-title"></h2><br/>
 
     <div class="left-col info-col server-col">
@@ -45,10 +46,11 @@
                 <h1 class="info spaced-lg">SERVER</h1>
 
                 <div class="divider"></div>
-                <div class="version">COM.PT</div>
+                <div class="version">{{ config('app.name') }}</div>
                 <div class="divider"></div>
 
-                <h2 class="info spaced-sm">Round started on: <span class="date" data-bind="text: releaseDate"></span></h2>
+                <h2 class="info spaced-sm">Round started on: <span class="date" data-bind="text: releaseDate"></span>
+                </h2>
             </div>
 
             <!-- ko foreach: hof -->
@@ -59,13 +61,17 @@
             <!-- /ko -->
 
             <div class="gangster-info">
-                <p><span class="info">Online gangsters:</span> <span class="value" data-bind="text: onlineGangsters">0</span></p>
+                <p><span class="info">Online gangsters:</span> <span class="value"
+                                                                     data-bind="text: onlineGangsters">0</span></p>
 
-                <p><span class="info">Alive gangsters:</span> <span class="value" data-bind="text: aliveGangsters">2</span></p>
+                <p><span class="info">Alive gangsters:</span> <span class="value"
+                                                                    data-bind="text: aliveGangsters">2</span></p>
 
-                <p><span class="info">Registered gangsters:</span> <span class="value" data-bind="text: totalGangsters">3</span></p>
+                <p><span class="info">Registered gangsters:</span> <span class="value" data-bind="text: totalGangsters">3</span>
+                </p>
             </div>
-        </script>    </div>
+        </script>
+    </div>
     <div class="right-col character-col">
         <div class="ribbon"><img src="assets/omerta/main/account/assets/img/corner-ribbon.png"/></div>
         <character-wrapper class="character-container">
@@ -94,20 +100,25 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" placeholder="Ingame" style="text-transform: capitalize;" data-bind="uniqueName: true, value: name, attr: {disabled: !bNewUser}" maxlength="12" autofocus>
+                            <input type="text" placeholder="Ingame" style="text-transform: capitalize;"
+                                   data-bind="uniqueName: true, value: name, attr: {disabled: !bNewUser}" maxlength="12"
+                                   autofocus>
 
                         </td>
                         <td>
                             <div class="gender-select" data-bind="css: {selectable: bNewUser}">
-                                <span class="male" data-bind="click: selectMale, css: {active: isMale()}"><i class="fa fa-mars"></i></span>
-                                <span class="female" data-bind="click: selectFemale, css: {active: isFemale()}"><i class="fa fa-venus"></i></span>
+                                <span class="male" data-bind="click: selectMale, css: {active: isMale()}"><i
+                                            class="fa fa-mars"></i></span>
+                                <span class="female" data-bind="click: selectFemale, css: {active: isFemale()}"><i
+                                            class="fa fa-venus"></i></span>
                             </div>
                         </td>
                     </tr>
                 </table>
             </div>
 
-        </script>    </div>
+        </script>
+    </div>
     <div class="clearfix"></div>
     <div class="pull-right action-container" data-bind="with: omerta.loaded.character">
         <a href="javascript:void(0)" class="btn btn-big btn-blue action-btn"
@@ -150,14 +161,16 @@
             <div data-bind="visible: isEnabledTabSetting()">
 
 
-
                 <form action="#a">
 
                     <!-- ko if: omerta.loaded.settings().length == 0 -->
-                    <div class="form-containe" style="margin: 10px 20px; text-align: center;">You need to create an account before configure it.</div>
+                    <div class="form-containe" style="margin: 10px 20px; text-align: center;">You need to create an
+                        account before configure it.
+                    </div>
                     <!-- /ko -->
 
-                    <div class="form-container" data-bind="template: { name: 'fieldset-template', foreach: omerta.loaded.settings, as: 'setting' }"></div>
+                    <div class="form-container"
+                         data-bind="template: { name: 'fieldset-template', foreach: omerta.loaded.settings, as: 'setting' }"></div>
                 </form>
 
 
@@ -170,14 +183,18 @@
                             <span class="field-value" data-bind="text: value, visible: !showValue()"></span>
 
                             <!-- ko if: fields.length == 0-->
-                            <div class="input-f input-f-single" data-bind="visible: showValue(),template: { name: 'input-template', data: setting }, css: {'input-f-editable': editable, 'input-f-non-editable': !editable}"></div>
+                            <div class="input-f input-f-single"
+                                 data-bind="visible: showValue(),template: { name: 'input-template', data: setting }, css: {'input-f-editable': editable, 'input-f-non-editable': !editable}"></div>
                             <!-- /ko -->
 
                             <!-- ko if: fields.length > 0-->
-                            <div class="input-f input-f-multiple" data-bind="visible: showValue(), template: { name: 'input-template', foreach: fields, data: setting}"></div>
+                            <div class="input-f input-f-multiple"
+                                 data-bind="visible: showValue(), template: { name: 'input-template', foreach: fields, data: setting}"></div>
                             <!-- /ko -->
 
-                            <a href="javascript:void(0)" data-bind="click: toggleForm, text: showValue() ? editable ? 'Definir' : 'Close' : 'Alterar'" class="btn btn-small btn-blue">Change</a>
+                            <a href="javascript:void(0)"
+                               data-bind="click: toggleForm, text: showValue() ? editable ? 'Definir' : 'Close' : 'Alterar'"
+                               class="btn btn-small btn-blue">Change</a>
                         </div>
                     </fieldset>
                 </script>
@@ -270,7 +287,8 @@
         </div>
         <div class="dead-foot">
             <p>Create a new character and ...</p>
-            <a href="?module=Account" target="_top" class="btn btn-red" id="revenge-button">Comeback with a vengance!</a>
+            <a href="?module=Account" target="_top" class="btn btn-red" id="revenge-button">Comeback with a
+                vengance!</a>
         </div>
     </div>
 </div>

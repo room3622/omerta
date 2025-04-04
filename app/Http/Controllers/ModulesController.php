@@ -80,10 +80,10 @@ class ModulesController extends Controller
 
 
     /**
-     * Handle various module-related actions based on the request.
+     * Handle various module actions based on the request parameters.
      *
-     * @param Request $request The HTTP request containing module and action information.
-     * @return mixed
+     * @param Request $request The incoming HTTP request containing module and action information.
+     * @return Response
      */
     public function Modules(Request $request){
 
@@ -121,9 +121,11 @@ class ModulesController extends Controller
 
               case "Account" and $action ==="create" ;
 
+                /*
+                 *
+                 */
 
-
-            
+            print_r($_POST);
 
 
               break;
@@ -165,33 +167,8 @@ class ModulesController extends Controller
                     break;
 
                 case 'Account' and $action ==="FooterEndpoint" ;
-
-                /*
-                 * todo Repair nedet ASP
-                 */
-
-                    $deceasedCharacters = [
-                        ["name" => "5.44Room", "cleanName" => "Room", "killDate" => "13/12/2022", "rank" => "Chief", "gender" => 1, "version" => 5.44, "isHallOfFame" => false],
-                        ["name" => "5.29Room", "cleanName" => "Room", "killDate" => "22/03/2021", "rank" => "Pickpocket", "gender" => 1, "version" => 5.29, "isHallOfFame" => false],
-                        ["name" => "5.19Game", "cleanName" => "Game", "killDate" => "07/01/2020", "rank" => "Chief", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
-                        ["name" => "5.19Lm", "cleanName" => "Lm", "killDate" => "03/01/2020", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
-                        ["name" => "5.19Alarm", "cleanName" => "Alarm", "killDate" => "02/01/2020", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
-                        ["name" => "5.19Emp", "cleanName" => "Emp", "killDate" => "29/12/2019", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
-                        ["name" => "5.19Caravan", "cleanName" => "Caravan", "killDate" => "27/12/2019", "rank" => "Chief", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
-                        ["name" => "5.19Room", "cleanName" => "Room", "killDate" => "26/12/2019", "rank" => "Bruglione", "gender" => 1, "version" => 5.19, "isHallOfFame" => false],
-                        ["name" => "5.3Lm", "cleanName" => "Lm", "killDate" => "01/01/1970", "rank" => "Empty-suit", "gender" => 1, "version" => 5.3, "isHallOfFame" => false],
-                        ["name" => "5.43Room", "cleanName" => "Room", "killDate" => "01/01/1970", "rank" => "Pickpocket", "gender" => 1, "version" => 5.43, "isHallOfFame" => false]
-                    ];
-
-                    // Organize the response structure
-                    $responseData = [
-                        "settings" => [],
-                        "dead" => $deceasedCharacters,
-                        "messages" => []
-                    ];
-
-                    // Return the response in JSON format
-                    return response()->json($responseData)->send();
+                $data = AccountController::AccountGameHistory();
+                    return response()->json($data)->send();
 
 
 
@@ -211,17 +188,9 @@ class ModulesController extends Controller
 
 
                 case 'Account' and $action === "AliveUserEndpoint" ;
-
-
-                    $data = [
-                        "bLoading" => false,
-                        "bNewUser" => true,
-                    ];
-
+                $data = Character::CharacterChecks();
                 return   response()->json($data)->send();
-
-
-                    break;
+                break;
 
 
 
@@ -229,20 +198,7 @@ class ModulesController extends Controller
 
 
 
-                    $data = [
-                        "hof" => [
-                        ],
-                        "release_date" => "2025-03-04 12:00:00",
-                        "extension" => "com.pt",
-                        "stats" => [
-                            "total" => 305,
-                            "alive" => 233,
-                            "dead" => 72,
-                            "online" => 1
-                        ],
-                        "title" => "PARABÉNS <br/>AOS VENCEDORES!",
-                        "subtitle" => "do último round"
-                    ];
+                    $data = GameControler::ServerGameInfo();
                     return   response()->json($data)->send();
 
                     exit();
