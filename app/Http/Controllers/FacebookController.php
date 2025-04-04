@@ -46,7 +46,6 @@ class FacebookController extends Controller
 
 
 
-
             if($finduser){
 
                 Auth::login($finduser);
