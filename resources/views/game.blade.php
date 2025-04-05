@@ -38,22 +38,23 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- jQuery 1.8.1 -->
-    <script src="/assets/vendor/old/jquery.min.js"></script>
+    <script src="{{ asset("/assets/vendor/old/jquery.min.js" )}}"></script>
+
     <!--[if IE]>
-    <script src="/assets/vendor/extra/excanvas/excanvas.js"></script><![endif]-->
+    <script src="{{ asset("/assets/vendor/extra/excanvas/excanvas.js" )}}"></script><![endif]-->
 
     <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
-    <script src="/assets/vendor/old/jquery-ui.min.js"></script>
+    <script src="{{ asset("/assets/vendor/old/jquery-ui.min.js" )}}"></script>
 
     <!-- SWFObject 2.1 -->
-    <script src="/assets/vendor/old/swfobject.js"></script>
+    <script src={{ asset("/assets/vendor/old/swfobject.js" )}}"></script>
 
     <!-- Modernizer -->
-    <script src="/assets/vendor/old/modernizr.min.js"></script>
+    <script src="{{ asset("/assets/vendor/old/modernizr.min.js ")}}"></script>
 
 
     <!-- Socket.IO v1.7.3 -->
-    <script src="/assets/vendor/old/socket.io.min.js"></script>
+    <script src="{{ asset("/assets/vendor/old/socket.io.min.js" )}}"></script>
 
     <!-- Google Recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
