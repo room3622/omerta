@@ -244,12 +244,7 @@ class ModulesController extends Controller
                     break;
 
                 case "Information":
-                    $data = [
-                        'title' => 'Information Page',
-                        'content' => 'This page contains important details and is dynamically loaded.',
-                        'updated_at' => now(),
-                    ];
-                    return view("information", compact('data'));
+                    return view("information");
                     break;
 
 

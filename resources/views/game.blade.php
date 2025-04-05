@@ -31,7 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
 
     <!-- IMPORT ALL FONTS -->
-    <link rel="stylesheet" href="/assets/omerta/fonts/main.css"/>
+    <link rel="stylesheet" href="{{ asset("/assets/omerta/fonts/main.css" )}}"/>
 
     <!-- FA 3.2.1 & 4.1.0 -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
@@ -78,9 +78,9 @@
             omerta.gameTitle = '{{ config('app.name') }}';
 
             omerta.chat.nick = 'Room';
-            omerta.chat.server = 'https://realtime.barafranca.com';
+            omerta.chat.server = 'https://realtime.omerto.uk';
             omerta.character.info.level(0);
-            omerta.chat.token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoiY29tLnB0IiwiaWQiOiIzMDYzOTkiLCJuYW1lIjoiUm9vbSIsImNpdHkiOiIwIiwiZmFtaWx5X2lkIjoiMCIsImxhc3RyYW5rIjoiU3dpbmRsZXIifQ.WzVilx3-_kWRWJbS117K1bZ-8l23TKtEO5dd2e9n3Z4';
+            omerta.chat.token = '1234567890';
             omerta.chat.banned(false);
 
 
