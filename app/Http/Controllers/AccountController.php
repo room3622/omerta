@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use App\Http\Controllers\ModulesController;
+use App\Models\User;
 
 
 class AccountController extends Controller
@@ -39,15 +40,19 @@ class AccountController extends Controller
     {
 
 
-        /*
-              * todo Repair nedet ASP
-              */
+       $users =  User::with('CharactersHistory')->where('id', Auth::id())->get();
 
-        $deceasedCharacters = [
 
-            ["name" => "5.3Lm", "cleanName" => "Lm", "killDate" => "01/01/1970", "rank" => "Empty-suit", "gender" => 1, "version" => 5.3, "isHallOfFame" => true],
 
-        ];
+        $deceasedCharacters = array();
+       foreach ($users[0]->CharactersHistory as $user):
+
+           $json_decoded = json_decode($user->character_history );
+           $deceasedCharacters[] = array('name' => $user->name,"cleanName"=>"" ,"killDate"=>"" , "rank" => "", "gender" => "", "version" => "", "isHallOfFame" => false);
+       endforeach;
+
+
+
 
         // Organize the response structure
         $responseData = [

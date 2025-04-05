@@ -1,10 +1,33 @@
-<!DOCTYPE html>
+@php
+    $version =   \App\Http\Controllers\GameControler::GameVersion();
+
+
+
+
+
+
+
+
+
+
+
+
+
+//echo $user->email;
+//echo $user->alive->name;
+//exit()
+
+
+
+@endphp<!DOCTYPE html>
 <html>
 <head>
 
     <title id="pageTitle">{{ config('app.name') }}</title>
 
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
 
     <!-- IMPORT ALL FONTS -->
@@ -36,10 +59,11 @@
     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
 
     <!-- Omerta -->
-    <link href="{{ asset('/assets/5.7.3.0/layout.css' )}}" rel="stylesheet"/>
+    <link href="{{ asset("/assets/{$version}/layout.css" )}}" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="/static/css/game/kill/style.css?v=5.7.3.0">
-    <script src="{{ asset('/assets/5.7.3.0/layout.js' )}}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ asset("/static/css/game/kill/style.css?v=5.7.3.0")}}">
+
+    <script src="{{ asset("/assets/{$version}/layout.js" )}}" type="text/javascript"></script>
 
 
 
@@ -48,9 +72,9 @@
         $(window).load(function () {
 
             // Server info
-            omerta.game = "com.pt";
-            omerta.version = "5.7.3.0";
-            omerta.gameTitle = 'Omerta (PT/BR)';
+            omerta.game = "{{ config('app.name') }}";
+            omerta.version = "{{$version}}";
+            omerta.gameTitle = '{{ config('app.name') }}';
 
             omerta.chat.nick = 'Room';
             omerta.chat.server = 'https://realtime.barafranca.com';
@@ -60,18 +84,21 @@
 
 
             // Loader
-            omerta.GUI.loader.load(['./ajax_banner.php', './?module=Services.Menu', './information.php', './ajax_info.php']);
+            omerta.GUI.loader.load(['./ajax_banner.php', './?module=Services.Menu', './?module=information', './ajax_info.php']);
 
         });
     </script>
 
 
 </head>
-<body data-bind="style: {backgroundImage: omerta.GUI.container.getBackground}" class="body-pt ext-com-pt">
+<body data-bind="style: {backgroundImage: omerta.GUI.container.getBackground}"  class="body-en ext-com">
+
 
 <!-- SPLASH SCREENS -->
 <div id="splash_loading"
-     style="display: block; position: fixed; top: 0; left: 0; bottom: 0; width: 100%; height: 100%; overflow: hidden; background: #000000 url('//static.barafranca.com/assets/omerta/main/layout/assets/img/splash/loading/com.pt-background.jpg') no-repeat center center; background-size: cover; z-index: 99999;">
+     style="display: block; position: fixed; top: 0; left: 0; bottom: 0; width: 100%; height: 100%; overflow: hidden; background: #000000 url('{{ asset("assets/omerta/main/layout/assets/img/splash/loading/com-background.jpg" )}}') no-repeat center center; background-size: cover; z-index: 99999;">
+
+
     <div>
 
 
@@ -137,10 +164,16 @@
                     </a>
                 </li>
 
+
+
                 <li class="pull-right bar"><a id="displayText">
-                        <span class="__cf_email__" data-cfemail="f3819c9c9ec0c5c1c1b3949e929a9fdd909c9e">[email&#160;protected]</span>
+                        <span class="__cf_email__">{{ $user->email }}</span>
                     </a>
                 </li>
+
+
+
+
 
                 <li class="pull-right bar bar-support"><a
                         href="/?module=Donate.Methods">Ajuda o Omerta</a></li>
@@ -175,7 +208,8 @@
                 <span class="winner" data-bind="text: data().familyname">Família</span>
 
                 <span class="percent percent-logo">
-            <img src="/assets/omerta/widgets/EOG/assets/img/winner-item.png">
+            <img src="{{ asset("/assets/omerta/widgets/EOG/assets/img/winner-item.png")}}">
+
         </span>
 
                 <span class="percent percent-text" data-bind="text: data().percentage + '%'">100%</span>
@@ -194,7 +228,8 @@
 
                 <!-- ko if: showWinner() -->
                 <li class="eog-winner">
-                    <b>WINNER OF <span>ROUND</span> <span class="reset-round" data-bind="text: roundVersion() + '!'">0</span></b><img src="/assets/omerta/widgets/EOG/assets/img/winner-item.png">
+                    <b>WINNER OF <span>ROUND</span> <span class="reset-round" data-bind="text: roundVersion() + '!'">0</span></b><img src="{{ asset("/assets/omerta/widgets/EOG/assets/img/winner-item.png")}}">
+
                 </li>
                 <!-- /ko -->
 
@@ -208,7 +243,8 @@
         <div class="Milestones_popup" data-bind="visible: omerta.services.account.isMilestoneWaiting() && omerta.GUI.container.currentModule() != 'Milestone'">
             <div class="Milestones_popup_top"><h3>COLLECT MILESTONE</h3></div>
             <div data-bind="click: omerta.services.account.ignoreWaitingMilestone" class="Milestones_popup_close"><i class="fa fa-times"></i></div>
-            <img class="Milestones_popup_icon"src="//static.barafranca.com/assets/omerta/main/account/assets/img/milestone_popup_icon.png" alt="Collect this milestone!">
+            <img class="Milestones_popup_icon"src="{{ asset("/assets/omerta/main/account/assets/img/milestone_popup_icon.png")}}" alt="Collect this milestone!">
+
             <p>
                 You have a milestone to collect. <br/>
                 Grab it now before the time is up!
@@ -326,7 +362,9 @@
                 <!-- Health -->
                 <div class="bar-info bar-info-health pull-right" data-bind="click: omerta.GUI.menu.loadMenuItem.bind($data, 'city-hospital', false)">
                     <div class="icon"><img
-                            src="//static.barafranca.com/assets/omerta/main/layout/assets/img/barinfo/icon-health.png">
+                            src="{{ asset("assets/omerta/main/layout/assets/img/barinfo/icon-health.png" )}}">
+
+
                     </div>
                     <div class="progressbar-container">
 
@@ -345,7 +383,7 @@
                 <!-- Rank Progress -->
                 <div class="bar-info bar-info-rank pull-right" data-bind="click: omerta.GUI.menu.loadMenuItem.bind($data, 'account-launchpad', {oTab: 'actions'})">
                     <div class="rank-container" data-bind="text: omerta.character.progress.rank"></div>
-                    <img class="seperator" src="//static.barafranca.com/assets/omerta/main/layout/assets/img/barinfo/seperator.png"
+                    <img class="seperator" src="{{ asset("assets/omerta/main/layout/assets/img/barinfo/seperator.png")}}"
                          align="absmiddle"/>
 
                     <div class="progressbar-container">
@@ -366,7 +404,7 @@
                 <!-- Account Plating -->
                 <div class="bar-info bar-info-rank pull-right popup-info" data-title="Account Plating" data-url="/?module=Services.AccountPlating&action=getCooldownInfo">
                     <div class="rank-container"><i class="fa fa-shield"></i> PLATING </div>
-                    <img class="seperator" src="//static.barafranca.com/assets/omerta/main/layout/assets/img/barinfo/seperator.png"  align="absmiddle"/>
+                    <img class="seperator" src="{{ asset("assets/omerta/main/layout/assets/img/barinfo/seperator.png")}}"  align="absmiddle"/>
 
                     <div class="progressbar-container">
                         <div style="margin-top: -10px; color: #afafa5; text-align: center; text-transform: uppercase; ">
@@ -427,7 +465,7 @@
                     </div>                </div>
 
                 <div class="char-info-container">
-                    <a class="name" href="/user.php?nick=Room">Room</a>
+                    <a class="name" href="/user.php?nick={{ ucfirst($user->alive->name) }}">{{ ucfirst($user->alive->name) }}</a>
                     <a class="family family-empty" href="/family_recruitment.php">Sem família</a>
                 </div>
             </div>
@@ -438,8 +476,9 @@
                     <a href="/?module=City" data-page-title="City">
                         <span id="city_gift_notification" class="sidebar-bubble-number hidden"><i
                                 class="fa fa-gift"></i></span>
-                        <img src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/map.png"/>
-                        <img class="hover" src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/map-hover.png"/>
+                        <img src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/map.png")}}"/>
+
+                        <img class="hover" src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/map-hover.png")}}"/>
 
                         <div class="label">Cidade</div>
                     </a>
@@ -447,8 +486,9 @@
                 <div class="mail" data-wtype="inbox">
                     <a href="/?module=Mail" data-page-title="Mail">
                         <span class="sidebar-bubble-number hidden">0</span>
-                        <img src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/mail.png"/>
-                        <img class="hover" src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/mail-hover.png"/>
+                        <img src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/mail.png")}}"/>
+                        <img class="hover" src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/mail-hover.png")}}"/>
+
 
                         <div class="label">Correio</div>
                     </a>
@@ -456,8 +496,9 @@
                 <div class="alerts" data-wtype="alert">
                     <a href="/?module=Mail" data-page-title="Mail">
                         <span class="sidebar-bubble-number hidden">0</span>
-                        <img src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/alert.png"/>
-                        <img class="hover" src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/alert-hover.png"/>
+                        <img src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/alert.png")}}"/>
+                        <img class="hover" src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/alert-hover.png")}}"/>
+
 
                         <div class="label">Alertas</div>
                     </a>
@@ -466,8 +507,9 @@
                 <div class="chat" data-wtype="chat" data-bind="with: omerta.widgets.Sidepanel">
                     <a href="javascript:void(0)" data-bind="click: UI.events.toggle">
                         <span class="sidebar-bubble-number hidden">0</span>
-                        <img src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/chat.png"/>
-                        <img class="hover" src="//static.barafranca.com/assets/omerta/widgets/Sidebar/assets/img/icons/chat-hover.png"/>
+
+                        <img src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/chat.png")}}"/>
+                        <img class="hover" src="{{ asset("/assets/omerta/widgets/Sidebar/assets/img/icons/chat-hover.png")}}"/>
 
                         <div class="label">Chat</div>
                     </a>
@@ -567,14 +609,15 @@
                         <ul class="list-inline character-stats-wrapper bottom-info-money">
                             <li>
                                 <a href="/bank.php" title="Pocket money">
-                                    <img src="//static.barafranca.com/assets/omerta/widgets/CharacterStats/assets/img/money-bag.png" alt="money-bag">
+
+                                    <img src=" {{ asset("/assets/omerta/widgets/CharacterStats/assets/img/money-bag.png")}}" alt="money-bag">
                                     <span data-bind="text: '$ ' + number_format(money())">0</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="/bank.php" title="Bank money">
-                                    <img src="//static.barafranca.com/assets/omerta/widgets/CharacterStats/assets/img/money-safe.png"
+                                    <img src="{{ asset("/assets/omerta/widgets/CharacterStats/assets/img/money-safe.png")}}"
                                          alt="money-safe">
                                     <span data-bind="text: '$ ' + number_format(bank())">0</span>
                                 </a>
@@ -586,7 +629,9 @@
                         <ul class="list-inline character-stats-wrapper bottom-info-bullets">
                             <li>
                                 <a href="/bullets2.php" title="Bullets">
-                                    <img src="//static.barafranca.com/assets/omerta/widgets/CharacterStats/assets/img/bullets.png" alt="bullet-img">
+
+
+                                    <img src=" {{ asset("/assets/omerta/widgets/CharacterStats/assets/img/bullets.png")}}" alt="bullet-img">
                                     <span data-bind="text: number_format(bullets())">0</span>
                                 </a>
                             </li>
@@ -753,7 +798,7 @@
             <h1>The bastards killed you !</h1>
         </div>
         <div class="dead-skull">
-            <img src="//static.barafranca.com/assets/omerta/main/layout/assets/img/skull/skull-big-2.png?r=1" alt="dead skull"/>
+            <img src="{{ asset("/assets/omerta/main/layout/assets/img/skull/skull-big-2.png?r=1")}}" alt="dead skull"/>
         </div>
         <div class="dead-foot">
             <p>Create a new character and ...</p>
@@ -771,7 +816,7 @@
         );
         omerta.character.info.name('Room');
         omerta.character.info.gender('1');
-        omerta.character.info.avatar("//static.barafranca.com/omerta_placeholder.png");
+        omerta.character.info.avatar("{{ asset("omerta_placeholder.png")}}");
         omerta.character.info.dc_level(2);
         omerta.character.info.startdate(startDate);
         omerta.character.info.bloodtype('A');

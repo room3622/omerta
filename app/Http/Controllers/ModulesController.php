@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Http\Controllers\MailGunController;
+use Illuminate\View\View;
 use League\Flysystem\Config;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RecoverController;
 use Illuminate\Support\Carbon;
 use ReCaptcha\RequestMethod\Post;
+use App\Models\User;
+use App\Models\Characters;
+use function PHPUnit\Framework\isEmpty;
 
 class ModulesController extends Controller
 {
@@ -33,10 +38,33 @@ class ModulesController extends Controller
 
             if (Auth::check()) {
 
+                $user =  User::with('alive')->where('id', Auth::id())->first();
 
 
-                //return view('game');
-                return view("Carater");
+
+
+              if($user->alive){
+                 // echo "alive";
+
+
+
+
+                  return view('game', compact('user'));
+
+              }elseif (isEmpty($user->alive)){
+              //    echo "dead";
+
+                  return view("Carater");
+              }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -44,31 +72,9 @@ class ModulesController extends Controller
 
 
 
-                $users = DB::table('users')->get();
 
-
-
-
-                //MailGunController::Sendmail("mail@gmail.com");
-
-                //MailGunController::Register('mail@gmail.com');
-
-
-
-                //$data   = DB::table('password_resets')->get();
-
-
-
-
-
-
-
-
-
-
-                //return view("game");
                 return view('login');
-                //return view("data");
+
 
             }
 
@@ -117,17 +123,47 @@ class ModulesController extends Controller
              * to be improved to OOP
              */
 
+            //echo $module;
+
             switch ($module) {
+
+
+
+
+
+
+
+
+
+
+
+
 
               case "Account" and $action ==="create" ;
 
-                /*
-                 *
-                 */
 
-            print_r($_POST);
+              break;
 
 
+
+              case 'Services.Security' and $action ==="check";
+
+
+
+              $data2 = array(
+                'status'=>'OK',
+
+              );
+
+                  $data = array(
+                      'data' => $data2,
+                      'code' => 0,
+                      'time' => time(),
+                      'debug' => array()
+                  );
+                  header('Content-Type: application/json; charset=utf-8');
+                  return response()->json($data);
+                  exit();
               break;
 
 
@@ -159,12 +195,13 @@ class ModulesController extends Controller
 
                 case 'Servicesaccount';
 
+                $data = GameControler::ServicesAccounts();
+                    return response()->json($data)->send();
+                exit();
                     break;
 
 
-                case 'Servicesmenu';
 
-                    break;
 
                 case 'Account' and $action ==="FooterEndpoint" ;
                 $data = AccountController::AccountGameHistory();
@@ -180,7 +217,11 @@ class ModulesController extends Controller
 
 
 
+                case "Servicesmenu";
 
+                    $data = GameControler::ServviceMenu();
+                    return   response()->json($data)->send();
+                    break;
 
 
 
@@ -195,15 +236,29 @@ class ModulesController extends Controller
 
 
                 case 'Homepage.Reset' and $action ==="hof" ;
-
-
-
                     $data = GameControler::ServerGameInfo();
                     return   response()->json($data)->send();
 
                     exit();
 
                     break;
+
+                case "Information":
+                    $data = [
+                        'title' => 'Information Page',
+                        'content' => 'This page contains important details and is dynamically loaded.',
+                        'updated_at' => now(),
+                    ];
+                    return view("information", compact('data'));
+                    break;
+
+
+
+
+
+
+
+
 
                 default:
                     return $this->Login($request, 'This module dont existes! ', 200);
@@ -319,6 +374,8 @@ class ModulesController extends Controller
     public function store(Request $request)
     {
         //
+
+
 
     }
 
