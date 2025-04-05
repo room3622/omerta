@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -21,420 +19,321 @@ use function PHPUnit\Framework\isEmpty;
 
 class ModulesController extends Controller
 {
-
-
+    /**
+     * Constructor.
+     */
     public function __construct()
     {
     }
 
-    public function Start(Request $request)
+    /**
+     * Start method.
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function start(Request $request)
     {
+        self::deletePasswordResets();
 
-        self::DeletePasswordResets();
+        if (Auth::check()) {
+            $user = User::with('alive')->where('id', Auth::id())->first();
 
-
-
-
-
-            if (Auth::check()) {
-
-                $user =  User::with('alive')->where('id', Auth::id())->first();
-
-
-
-
-              if($user->alive){
-                 // echo "alive";
-
-
-
-
-                  return view('game', compact('user'));
-
-              }elseif (isEmpty($user->alive)){
-              //    echo "dead";
-
-                  return view("Carater");
-              }
-
-
-
-
-
-
-
-
-
-
-
-
-            }elseif(!Auth::check()) {
-
-
-
-
-                return view('login');
-
-
+            if ($user->alive) {
+                return view('game', compact('user'));
+            } elseif (isEmpty($user->alive)) {
+                return view("Carater");
             }
-
-
-
-
-
+        } elseif (!Auth::check()) {
+            return view('login');
+        }
     }
-
 
     /**
      * Handle various module actions based on the request parameters.
      *
-     * @param Request $request The incoming HTTP request containing module and action information.
+     * @param Request $request
      * @return Response
      */
-    public function Modules(Request $request){
-
+    public function modules(Request $request)
+    {
         if (isset($request->module)) {
-
-
-
-            $module = $request->module;
-
-
-            /*
-             * this moduler  needs big fix
-             * OOP need big improve maybe to a class on its alone
-             */
-
-
-            // URL  modules lowercase only the first character is upper case
-            // removed all  . and withe spaces
-            // need to implement auto
-            // need to transform to OOP
-            $module = str_replace('.', '', $module);
-            $module = Str::lower($module);
-            $module = ucfirst($module);
-
+            $module = $this->formatModule($request->module);
             $action = $request->action;
 
-
-
-            /*
-             * switch case to get url modules
-             * to be improved to OOP
-             */
-
-            //echo $module;
-
-            switch ($module) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-              case "Account" and $action ==="create" ;
-
-
-              break;
-
-
-
-              case 'Services.Security' and $action ==="check";
-
-
-
-              $data2 = array(
-                'status'=>'OK',
-
-              );
-
-                  $data = array(
-                      'data' => $data2,
-                      'code' => 0,
-                      'time' => time(),
-                      'debug' => array()
-                  );
-                  header('Content-Type: application/json; charset=utf-8');
-                  return response()->json($data);
-                  exit();
-              break;
-
-
-                case 'Homepagelogin';
-
-                if($request->action ==="Forgottenpassword"){
-
-                    return RecoverController::RecoverPassword($request);
-
-                }elseif($request->action ==="RecoverPassword"){
-
-
-
-                  return RecoverController::FinalReset($request);
-
-                }else{
-
-                    return $this->Login($request);
-
-                }
-
-
-
-                    break;
-                case 'Homepageregister';
-                    return $this->Register($request, 'resgister Moduler', 200);
-                    break;
-
-
-                case 'Servicesaccount';
-
-                $data = GameControler::ServicesAccounts();
-                    return response()->json($data)->send();
-                exit();
-                    break;
-
-
-
-
-                case 'Account' and $action ==="FooterEndpoint" ;
-                $data = AccountController::AccountGameHistory();
-                    return response()->json($data)->send();
-
-
-
-                    break;
-
-
-
-
-
-
-
-                case "Servicesmenu";
-
-                    $data = GameControler::ServviceMenu();
-                    return   response()->json($data)->send();
-                    break;
-
-
-
-
-
-
-                case 'Account' and $action === "AliveUserEndpoint" ;
-                $data = Character::CharacterChecks();
-                return   response()->json($data)->send();
-                break;
-
-
-
-                case 'Homepage.Reset' and $action ==="hof" ;
-                    $data = GameControler::ServerGameInfo();
-                    return   response()->json($data)->send();
-
-                    exit();
-
-                    break;
-
-                case "Information":
-                    return view("information");
-                    break;
-
-
-
-
-
-
-
-
-
-                default:
-                    return $this->Login($request, 'This module dont existes! ', 200);
-
-            }
-
-
+            return $this->handleModuleAction($module, $action, $request);
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    public function Login(Request $request)
+    /**
+     * Format the module name.
+     *
+     * @param string $module
+     * @return string
+     */
+    private function formatModule(string $module)
     {
+        $module = str_replace('.', '', $module);
+        $module = Str::lower($module);
+        $module = ucfirst($module);
 
+        return $module;
+    }
 
+    /**
+     * Handle the module action.
+     *
+     * @param string $module
+     * @param string $action
+     * @param Request $request
+     * @return Response
+     */
+    private function handleModuleAction(string $module, string $action, Request $request)
+    {
+        switch ($module) {
+            case "Account":
+                return $this->handleAccountAction($action, $request);
+            case 'Services.Security':
+                return $this->handleSecurityAction($action, $request);
+            case 'Homepagelogin':
+                return $this->handleLoginAction($action, $request);
+            case 'Homepageregister':
+                return $this->handleRegisterAction($request);
+            case 'Servicesaccount':
+                return $this->handleServicesAccountAction($request);
+            case 'Account':
+                return $this->handleAccountFooterAction($action, $request);
+            case "Servicesmenu":
+                return $this->handleServicesMenuAction($request);
+            case 'Account':
+                return $this->handleAliveUserAction($action, $request);
+            case 'Homepage.Reset':
+                return $this->handleResetAction($action, $request);
+            case "Information":
+                return view("information");
+            default:
+                return $this->handleDefaultAction($request);
+        }
+    }
 
+    /**
+     * Handle the account action.
+     *
+     * @param string $action
+     * @param Request $request
+     * @return Response
+     */
+    private function handleAccountAction(string $action, Request $request)
+    {
+        switch ($action) {
+            case "create":
+                // Handle create action
+                break;
+            case "FooterEndpoint":
+                $data = AccountController::AccountGameHistory();
+                return response()->json($data)->send();
+            case "AliveUserEndpoint":
+                $data = Character::CharacterChecks();
+                return response()->json($data)->send();
+            default:
+                return $this->handleDefaultAction($request);
+        }
+    }
+
+    /**
+     * Handle the security action.
+     *
+     * @param string $action
+     * @param Request $request
+     * @return Response
+     */
+    private function handleSecurityAction(string $action, Request $request)
+    {
+        switch ($action) {
+            case "check":
+                $data2 = array(
+                    'status' => 'OK',
+                );
+
+                $data = array(
+                    'data' => $data2,
+                    'code' => 0,
+                    'time' => time(),
+                    'debug' => array()
+                );
+                header('Content-Type: application/json; charset=utf-8');
+                return response()->json($data);
+            default:
+                return $this->handleDefaultAction($request);
+        }
+    }
+
+    /**
+     * Handle the login action.
+     *
+     * @param string $action
+     * @param Request $request
+     * @return Response
+     */
+    private function handleLoginAction(string $action, Request $request)
+    {
+        switch ($action) {
+            case "Forgottenpassword":
+                return RecoverController::RecoverPassword($request);
+            case "RecoverPassword":
+                return RecoverController::FinalReset($request);
+            default:
+                return $this->login($request);
+        }
+    }
+
+    /**
+     * Handle the register action.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    private function handleRegisterAction(Request $request)
+    {
+        return $this->register($request, 'resgister Moduler', 200);
+    }
+
+    /**
+     * Handle the services account action.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    private function handleServicesAccountAction(Request $request)
+    {
+        $data = GameControler::ServicesAccounts();
+        return response()->json($data)->send();
+    }
+
+    /**
+     * Handle the account footer action.
+     *
+     * @param string $action
+     * @param Request $request
+     * @return Response
+     */
+    private function handleAccountFooterAction(string $action, Request $request)
+    {
+        switch ($action) {
+            case "FooterEndpoint":
+                $data = AccountController::AccountGameHistory();
+                return response()->json($data)->send();
+            default:
+                return $this->handleDefaultAction($request);
+        }
+    }
+
+    /**
+     * Handle the services menu action.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    private function handleServicesMenuAction(Request $request)
+    {
+        $data = GameControler::ServviceMenu();
+        return response()->json($data)->send();
+    }
+
+    /**
+     * Handle the alive user action.
+     *
+     * @param string $action
+     * @param Request $request
+     * @return Response
+     */
+    private function handleAliveUserAction(string $action, Request $request)
+    {
+        switch ($action) {
+            case "AliveUserEndpoint":
+                $data = Character::CharacterChecks();
+                return response()->json($data)->send();
+            default:
+                return $this->handleDefaultAction($request);
+        }
+    }
+
+    /**
+     * Handle the reset action.
+     *
+     * @param string $action
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    private function handleResetAction(string $action, Request $request)
+    {
+        switch ($action) {
+            case "hof":
+                $data = GameControler::ServerGameInfo();
+                return response()->json($data)->send();
+            default:
+                return $this->handleDefaultAction($request);
+        }
+    }
+
+    /**
+     * Handle the default action.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    private function handleDefaultAction(Request $request)
+    {
+        return $this->login($request, 'This module dont existes! ', 200);
+    }
+
+    /**
+     * Login method.
+     *
+     * @param Request $request
+     * @param string $msg
+     * @param int $code
+     * @return Response
+     */
+    public function login(Request $request, string $msg = '', int $code = 0)
+    {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->pass])) {
-
-
             $request->session()->regenerate();
 
-
-
-            $code = 0;
             return RenderController::Render($request, '', $code);
-            return redirect()->intended('/');
-
-        }else{
-
-            $msg = "na na !";
-            $code = 10;
+        } else {
             return RenderController::Render($request, $msg, $code);
         }
-
-
-
-
-
     }
 
-
-    public function Register(Request $request, $msg, $code)
+    /**
+     * Register method.
+     *
+     * @param Request $request
+     * @param string $msg
+     * @param int $code
+     * @return Response
+     */
+    public function register(Request $request, string $msg, int $code)
     {
-
-
         if (DB::table('users')->where('email', $request->mail)->exists()) {
-
-            /*
-             * this checks if the email is in the database
-             * impute needs to be clen
-             * prepare statement im place
-             * show the error msg
-             */
-
             $msg = 'This Email Is Already Registered!';
-
-
         } else {
-            /*
-             * provide to Register the account
-             * need email validation to be sent to user
-             * and generate a password
-             * then insert data to the database
-             *
-             */
-
-
-           return RegisterController::Register($request);
+            return RegisterController::Register($request);
         }
-
 
         return RenderController::Render($request, $msg, $code);
     }
 
-
     /**
-     * Display a listing of the resource.
+     * Delete password resets method.
      *
-     * @return Response
+     * @param int $minutes
      */
-    public function index()
+    public static function deletePasswordResets(int $minutes = 60)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        //
-
-
-
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param int $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-
-    public static function DeletePasswordResets($minuts=60){
         DB::table('password_resets')
-            ->where('created_at', '<', Carbon::now()->subMinutes($minuts)->toDateTimeString())
+            ->where('created_at', '<', Carbon::now()->subMinutes($minutes)->toDateTimeString())
             ->delete();
-
-    }
-
-
-
-
-    public function outputdatajson($data)
-    {
-
-        return response($data, 200)
-            ->header('Content-Type:', 'application/json');
     }
 }
